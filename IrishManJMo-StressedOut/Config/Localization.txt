@@ -233,6 +233,8 @@ drinkJarGoldRush,Gold Rush
 drinkJarGoldRushDesc,"A cocktail that combines the richness of bourbon with the sweetness of honey and a splash of citrus."
 drinkJarIrishCoffee,Irish Coffee
 drinkJarIrishCoffeeDesc,"A warming blend of hot coffee, smooth whiskey, and a touch of sugar, topped with cream."
+drinkJarBlackJack,"Black Jack"
+drinkJarBlackJackDesc,"A dark and mysterious cocktail with a bold blend of brandy and coffee, perfect for a night of high stakes."
 drinkJarGinandJuice,Gin and Juice
 drinkJarGinandJuiceDesc,"A laid-back mix of gin and fruit juice, ideal for unwinding."
 drinkJarNewVegasBomb,New Vegas Bomb

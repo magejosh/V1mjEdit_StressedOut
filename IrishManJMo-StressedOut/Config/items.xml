@@ -288,7 +288,7 @@
 	<property name="ItemTypeIcon" value="book"/>
 	<property name="AltItemTypeIcon" value="book_read"/>
 	<property name="CustomIcon" value="schematicMaster"/>
-	<property name="CreativeMode" value="None"/>
+	<property name="CreativeMode" value="Player"/>
 	<property name="HoldType" value="21"/>
 	<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -1169,7 +1169,7 @@
 	<property name="DisplayType" value="GoldRush"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
+	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
 	<property name="CustomIconTint" value="FFFB14"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->
@@ -1234,7 +1234,7 @@
 	<property name="DisplayType" value="IrishCoffee"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
+	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->
 	<property name="Weight" value="10"/>	
@@ -1289,7 +1289,7 @@
 	<property name="DisplayType" value="BlackJack"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
+	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
 	<property name="CustomIconTint" value="552C00"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->
@@ -1343,7 +1343,7 @@
 	<property name="DisplayType" value="GinJuice"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
+	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
 	<property name="CustomIconTint" value="8C00FF"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->
@@ -1397,7 +1397,7 @@
 	<property name="DisplayType" value="NewVegas"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
+	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
 	<property name="CustomIconTint" value="990000"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->
@@ -1452,7 +1452,7 @@
 	<property name="DisplayType" value="DayWalker"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
+	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
 	<property name="CustomIconTint" value="FFC500"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->
@@ -1507,7 +1507,7 @@
 	<property name="DisplayType" value="Zombie"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
+	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
 	<property name="CustomIconTint" value="99ff33"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->
@@ -1564,7 +1564,7 @@
 	<property name="DisplayType" value="DoubleTap"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
+	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
 	<property name="CustomIconTint" value="BAFF4F"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->
@@ -1618,7 +1618,7 @@
 	<property name="DisplayType" value="LongIsland"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
+	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
 	<property name="CustomIconTint" value="00ABE8"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->

@@ -5,6 +5,7 @@
 
 	<block name="plantedTobaccoSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="DescriptionKey" value="plantedTobaccoSproutDesc"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="plantedPotato3Harvest"/>
 		<property name="PlantGrowing.Next" value="plantedTobaccoGrowing"/>
@@ -43,9 +44,9 @@
 
 	<block name="plantedTobaccoPlant">
 		<property name="Extends" value="plantedTobacco3Harvest"/>
-		<property name="DescriptionKey" value="plantedTobaccoPlant"/>
+		<property name="DescriptionKey" value="plantedTobaccoPlantDesc"/>
 		<property name="CustomIcon" value="plantedPotato3Harvest"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Player"/>
 		<drop event="Harvest" name="foodCropTobacco" count="1" tag="cropHarvest"/>
 		<drop event="Harvest" name="foodCropTobacco" prob="0.5" count="1" tag="bonusCropHarvest"/>
 		<drop event="Harvest" name="foodCropTobacco" count="1" tag="farmerBonusHarvest"/>
@@ -58,6 +59,7 @@
 	
 	<block name="plantedSativaSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="DescriptionKey" value="plantedSativaSproutDesc"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="UnlockedBy" value="perkBrewmaster"/>
@@ -96,9 +98,9 @@
 
 	<block name="plantedSativaPlant">
 		<property name="Extends" value="plantedSativa3Harvest"/>
-		<property name="DescriptionKey" value="plantedSativaPlant"/>
+		<property name="DescriptionKey" value="plantedSativaPlantDesc"/>
 		<property name="CustomIcon" value="plantedHop1"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Player"/>
 		<drop event="Harvest" name="foodCropSativaBud" count="1" tag="cropHarvest"/>
 		<drop event="Harvest" name="foodCropSativaBud" prob="0.5" count="1" tag="bonusCropHarvest"/>
 		<drop event="Harvest" name="foodCropSativaBud" count="1" tag="farmerBonusHarvest"/>
@@ -111,6 +113,7 @@
 	
 	<block name="plantedIndicaSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="DescriptionKey" value="plantedIndicaSproutDesc"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="UnlockedBy" value="perkBrewmaster"/>
@@ -149,9 +152,9 @@
 
 	<block name="plantedIndicaPlant">
 		<property name="Extends" value="plantedIndica3Harvest"/>
-		<property name="DescriptionKey" value="plantedIndicaPlant"/>
+		<property name="DescriptionKey" value="plantedIndicaPlantDesc"/>
 		<property name="CustomIcon" value="plantedHop1"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Player"/>
 		<drop event="Harvest" name="foodCropIndicaBud" count="1" tag="cropHarvest"/>
 		<drop event="Harvest" name="foodCropIndicaBud" prob="0.5" count="1" tag="bonusCropHarvest"/>
 		<drop event="Harvest" name="foodCropIndicaBud" count="1" tag="farmerBonusHarvest"/>
@@ -164,6 +167,7 @@
 	
 	<block name="plantedSugarCaneSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="DescriptionKey" value="plantedSugarCaneSproutDesc"/>
 		<property name="CustomIcon" value="plantedCorn2"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="UnlockedBy" value="perkBrewmaster"/>
@@ -199,9 +203,9 @@
 
 	<block name="plantedSugarCanePlant">
 		<property name="Extends" value="plantedSugarCane3Harvest"/>
-		<property name="DescriptionKey" value="plantedSugarCanePlant"/>
-		<property name="CustomIcon" value="conduit01"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="DescriptionKey" value="plantedSugarCanePlantDesc"/>
+		<property name="CustomIcon" value="plantedCornDeadMedium"/>
+		<property name="CreativeMode" value="Player"/>
 		<drop event="Harvest" name="foodCropSugarCane" count="1" tag="cropHarvest"/>
 		<drop event="Harvest" name="foodCropSugarCane" prob="0.5" count="1" tag="bonusCropHarvest"/>
 		<drop event="Harvest" name="foodCropSugarCane" count="1" tag="farmerBonusHarvest"/>
@@ -252,9 +256,9 @@
 
 	<block name="plantedAgavePlant">
 		<property name="Extends" value="plantedAgave3Harvest"/>
-		<property name="DescriptionKey" value="plantedAgavePlant"/>
+		<property name="DescriptionKey" value="plantedAgavePlantDesc"/>
 		<property name="CustomIcon" value="plantedYucca3Harvest"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Player"/>
 		<drop event="Harvest" name="foodCropAgave" count="1" tag="cropHarvest"/>
 		<drop event="Harvest" name="foodCropAgave" prob="0.5" count="1" tag="bonusCropHarvest"/>
 		<drop event="Harvest" name="foodCropAgave" count="1" tag="farmerBonusHarvest"/>
@@ -267,6 +271,7 @@
 	
 	<block name="plantedCocoaSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="DescriptionKey" value="plantedCocoaSproutDesc"/>
 		<property name="CustomIcon" value="cropsHarvestableMaster"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="UnlockedBy" value="perkBrewmaster"/>
@@ -305,9 +310,9 @@
 
 	<block name="plantedCocoaPlant">
 		<property name="Extends" value="plantedCocoa3Harvest"/>
-		<property name="DescriptionKey" value="plantedCocoaPlant"/>
+		<property name="DescriptionKey" value="plantedCocoaPlantDesc"/>
 		<property name="CustomIcon" value="cropsHarvestableMaster"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Player"/>
 		<drop event="Harvest" name="foodCropCocoa" count="1" tag="cropHarvest"/>
 		<drop event="Harvest" name="foodCropCocoa" prob="0.5" count="1" tag="bonusCropHarvest"/>
 		<drop event="Harvest" name="foodCropCocoa" count="1" tag="farmerBonusHarvest"/>
@@ -320,6 +325,7 @@
 	
 	<block name="plantedBarleySprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="DescriptionKey" value="plantedBarleySproutDesc"/>
 		<property name="CustomIcon" value="treeForestGrassDiagonal"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="UnlockedBy" value="perkBrewmaster"/>
@@ -361,9 +367,9 @@
 
 	<block name="plantedBarleyPlant">
 		<property name="Extends" value="plantedBarley3Harvest"/>
-		<property name="DescriptionKey" value="plantedBarleyPlant"/>
+		<property name="DescriptionKey" value="plantedBarleyPlantDesc"/>
 		<property name="CustomIcon" value="treeForestGrassDiagonal"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Player"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkBrownPrefab"/>
 		<property name="MultiBlockDim" value="1,3,1"/>
@@ -379,6 +385,7 @@
 	
 	<block name="plantedWheatSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="DescriptionKey" value="plantedWheatSproutDesc"/>
 		<property name="CustomIcon" value="treeGreenBrownGrassDiagonal"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="UnlockedBy" value="perkBrewmaster"/>
@@ -420,9 +427,9 @@
 
 	<block name="plantedWheatPlant">
 		<property name="Extends" value="plantedWheat3Harvest"/>
-		<property name="DescriptionKey" value="plantedWheatPlant"/>
+		<property name="DescriptionKey" value="plantedWheatPlantDesc"/>
 		<property name="CustomIcon" value="treeGreenBrownGrassDiagonal"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Player"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkBrownPrefab"/>
 		<property name="MultiBlockDim" value="1,3,1"/>
