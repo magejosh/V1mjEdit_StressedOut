@@ -1,5 +1,5 @@
 # Stressed Out Mod - By IrishManJMo
-magejosh updated to v1 with permission from [IrishManJMo](https://github.com/IrishManJMo)
+magejosh updated to v1 with permission from [IrishManJMo](https://github.com/IrishManJMo).
 Made best efforts to maintain the intent of the mod while doing the updates. Though some changes were necessary due to vanilla changes. 
 
 ## Requirements
