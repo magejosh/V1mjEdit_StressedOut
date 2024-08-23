@@ -1,7 +1,8 @@
 <StressedOut>
 <insertBefore xpath="/items/item[@name='resourceScrapBrass']">
 
-	<item name="Tobacco">
+	<item name="foodCropTobacco">
+		<property name="Tags" value="food,foodSkill,fitness"/>
 		<property name="CustomIcon" value="resourceCropCoffeeBeans"/>
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -14,7 +15,8 @@
 		<property name="Group" value="Resources,Food/Cooking,CFFood/Cooking"/>
 	</item>
 
-	<item name="Sativa Bud">
+	<item name="foodCropSativaBud">
+		<property name="Tags" value="food,foodSkill,fitness"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -27,7 +29,8 @@
 		<property name="Group" value="Resources,Food/Cooking,CFFood/Cooking"/>
 	</item>
 	
-	<item name="Indica Bud">
+	<item name="foodCropIndicaBud">
+		<property name="Tags" value="food,foodSkill,fitness"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -40,7 +43,8 @@
 		<property name="Group" value="Resources,Food/Cooking,CFFood/Cooking"/>
 	</item>
 	
-	<item name="Sugar Cane">
+	<item name="foodCropSugarCane">
+		<property name="Tags" value="food,foodSkill,fitness"/>
 		<property name="CustomIcon" value="foodCropYuccaFruit"/>
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -53,7 +57,8 @@
 		<property name="Group" value="Resources,Food/Cooking,CFFood/Cooking"/>
 	</item>
 	
-	<item name="Agave">
+	<item name="foodCropAgave">
+		<property name="Tags" value="food,foodSkill,fitness"/>
 		<property name="CustomIcon" value="plantedAloe1"/>
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -66,7 +71,8 @@
 		<property name="Group" value="Resources,Food/Cooking,CFFood/Cooking"/>
 	</item>
 	
-	<item name="Cocoa">
+	<item name="foodCropCocoa">
+		<property name="Tags" value="food,foodSkill,fitness"/>
 		<property name="CustomIcon" value="resourceCropCoffeeBeans"/>
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -79,8 +85,9 @@
 		<property name="Group" value="Resources,Food/Cooking,CFFood/Cooking"/>
 	</item>
 	
-	<item name="Barley">
-		<property name="CustomIcon" value="apparelGhillieSuitHood"/>
+	<item name="foodCropBarley">
+		<property name="Tags" value="food,foodSkill,fitness"/>
+		<property name="CustomIcon" value="resourceCropHopsFlower"/>
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -92,7 +99,8 @@
 		<property name="Group" value="Resources,Food/Cooking,CFFood/Cooking"/>
 	</item>
 	
-	<item name="Wheat">
+	<item name="foodCropWheat">
+		<property name="Tags" value="food,foodSkill,fitness"/>
 		<property name="CustomIcon" value="treeBrownGrassDiagonal"/>
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -105,7 +113,8 @@
 		<property name="Group" value="Resources,Food/Cooking,CFFood/Cooking"/>
 	</item>
 	
-	<item name="Rice">
+	<item name="foodCropRice">
+		<property name="Tags" value="food,foodSkill,fitness"/>
 		<property name="CustomIcon" value="plantedYucca1"/>
 		<property name="TintColor" value="255,255,255"/>
 		<property name="HoldType" value="45"/>
@@ -119,7 +128,8 @@
 		<property name="Group" value="Resources,Food/Cooking,CFFood/Cooking"/>
 	</item>
 	
-	<item name="Yeast">
+	<item name="foodCropYeast">
+		<property name="Tags" value="food,foodSkill,fitness"/>
 		<property name="CustomIcon" value="resourceCrushedSand"/>
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -132,7 +142,8 @@
 		<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 	</item>
 	
-	<item name="Flour">
+	<item name="foodCropFlour">
+		<property name="Tags" value="food,foodSkill,fitness"/>
 		<property name="CustomIcon" value="resourceCrushedSand"/>
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
@@ -145,8 +156,8 @@
 		<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 	</item>
 	
-	<item name="Cigarette">
-		<property name="Tags" value="medical"/>
+	<item name="drugCigarette">
+		<property name="Tags" value="medical,medicalSkill,fitness"/>
 		<property name="HoldType" value="12"/>
 		<property name="Meshfile" value="@:Other/Items/Crafting/plant_fibers.fbx"/>
 		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -175,8 +186,8 @@
 	</effect_group>
 	</item>	
 	
-	<item name="Cigar">
-		<property name="Tags" value="medical"/>
+	<item name="drugCigar">
+		<property name="Tags" value="medical,medicalSkill,fitness"/>
 		<property name="HoldType" value="12"/>
 		<property name="Meshfile" value="@:Other/Items/Crafting/plant_fibers.fbx"/>
 		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -205,8 +216,8 @@
 	</effect_group>
 	</item>	
 	
-	<item name="Indica Joint">
-		<property name="Tags" value="medical"/>
+	<item name="drugIndicaJoint">
+		<property name="Tags" value="medical,medicalSkill,fitness"/>
 		<property name="HoldType" value="12"/>
 		<property name="Meshfile" value="@:Other/Items/Crafting/plant_fibers.fbx"/>
 		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -238,8 +249,8 @@
 	
 	</item>	
 	
-	<item name="Sativa Joint">
-		<property name="Tags" value="medical"/>
+	<item name="drugSativaJoint">
+		<property name="Tags" value="medical,medicalSkill,fitness"/>
 		<property name="HoldType" value="12"/>
 		<property name="Meshfile" value="@:Other/Items/Crafting/plant_fibers.fbx"/>
 		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -273,7 +284,7 @@
 	
 	</item>	
 		
-	<item name="A Nice Relaxing Book"> <!-- first book -->
+	<item name="bookANiceRelaxingBook"> <!-- first book -->
 	<property name="ItemTypeIcon" value="book"/>
 	<property name="AltItemTypeIcon" value="book_read"/>
 	<property name="CustomIcon" value="schematicMaster"/>
@@ -287,7 +298,8 @@
 	<property name="Stacknumber" value="20"/> <!-- STK book -->
 	<property name="EconomicValue" value="500"/>
 	<property name="DisplayType" value="foodCureStressed"/>
-	<property name="Group" value="Books,Mods"/>
+	<property name="Tags" value="medicalCSM,foodCSM,csm"/>
+	<property name="Group" value="Books,BooksOnly,TCReading"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
@@ -306,7 +318,8 @@
 	</effect_group>
 	</item>
 
-<item name="Stout">
+<item name="drinkJarStout">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -335,7 +348,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffStoutDuration" operation="add" value="123"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffStoutDuration" operation="set" value="363">
 				<requirement name="CVarCompare" cvar="$buffStoutDuration" operation="GT" value="363"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Stout"/>			
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffStout"/>			
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".1"/>
@@ -358,7 +371,8 @@
 	</effect_group>
 </item>
 
-<item name="Pilsner">
+<item name="drinkJarPilsner">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -389,7 +403,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPilsnerDuration" operation="add" value="48"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPilsnerDuration" operation="set" value="138">
 				<requirement name="CVarCompare" cvar="$buffPilsnerDuration" operation="GT" value="138"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Pilsner,buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffPilsner,buffProcessConsumables"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".1"/>		
@@ -413,7 +427,8 @@
 	</effect_group>
 </item>
 
-<item name="Porter">
+<item name="drinkJarPorter">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -443,7 +458,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPorterDuration" operation="add" value="303"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPorterDuration" operation="set" value="903">
 				<requirement name="CVarCompare" cvar="$buffPorterDuration" operation="GT" value="903"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Porter"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffPorter"/>
 	</effect_group>
 		<effect_group tiered="false">
 		<display_value name="dCureStress" value=".1"/>
@@ -467,7 +482,8 @@
 	</effect_group>
 </item>
 
-<item name="Pale Ale">
+<item name="drinkJarPaleAle">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -498,7 +514,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPaleAleDuration" operation="add" value="48"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPaleAleDuration" operation="set" value="138">
 				<requirement name="CVarCompare" cvar="$buffBeerDuration" operation="GT" value="138"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="PaleAle"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffPaleAle"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".1"/>		
@@ -522,7 +538,8 @@
 	</effect_group>
 </item>
 
-<item name="Lager">
+<item name="drinkJarLager">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -551,7 +568,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffLagerDuration" operation="add" value="603"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffLagerDuration" operation="set" value="1803">
 				<requirement name="CVarCompare" cvar="$buffLagerDuration" operation="GT" value="1803"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Lager"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffLager"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".1"/>		
@@ -575,7 +592,8 @@
 	</effect_group>
 </item>
 
-<item name="Wheat Ale">
+<item name="drinkJarWheatAle">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -606,7 +624,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffWheatAleDuration" operation="add" value="303"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffWheatAleDuration" operation="set" value="903">
 				<requirement name="CVarCompare" cvar="$buffWheatAleDuration" operation="GT" value="903"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="WheatAle"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffWheatAle"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".1"/>		
@@ -630,7 +648,8 @@
 	</effect_group>
 </item>
 
-<item name="Pumpkin Ale">
+<item name="drinkJarPumpkinAle">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -660,7 +679,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPumpkinAleDuration" operation="add" value="603"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPumpkinAleDuration" operation="set" value="903">
 				<requirement name="CVarCompare" cvar="$buffPumpkinAleDuration" operation="GT" value="903"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="PumpkinAle"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffPumpkinAle"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".1"/>		
@@ -684,7 +703,8 @@
 	</effect_group>
 </item>
 
-<item name="IPA">
+<item name="drinkJarIPA">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -714,7 +734,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffIPADuration" operation="add" value="303"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffIPADuration" operation="set" value="903">
 				<requirement name="CVarCompare" cvar="$buffIPADuration" operation="GT" value="903"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="IPA"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIPA"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".1"/>		
@@ -738,7 +758,8 @@
 	</effect_group>
 </item>
 
-<item name="Whiskey">
+<item name="drinkJarWhiskey">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -766,7 +787,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffWhiskeyDuration" operation="add" value="1803"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffWhiskeyDuration" operation="set" value="5403">
 				<requirement name="CVarCompare" cvar="$buffWhiskeyDuration" operation="GT" value="5403"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Whiskey"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffWhiskey"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".7"/>		
@@ -790,7 +811,8 @@
 	</effect_group>
 </item>
 
-<item name="Vodka">
+<item name="drinkJarVodka">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -818,7 +840,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffVodkaDuration" operation="add" value="1803"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffVodkaDuration" operation="set" value="5403">
 				<requirement name="CVarCompare" cvar="$buffVodkaDuration" operation="GT" value="5403"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Vodka"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffVodka"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".7"/>		
@@ -842,7 +864,8 @@
 	</effect_group>
 </item>
 
-<item name="Gin">
+<item name="drinkJarGin">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -870,7 +893,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffGinDuration" operation="add" value="1803"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffGinDuration" operation="set" value="5403">
 				<requirement name="CVarCompare" cvar="$buffGinDuration" operation="GT" value="5403"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Gin"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffGin"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".7"/>		
@@ -894,7 +917,8 @@
 	</effect_group>
 </item>
 
-<item name="Rum">
+<item name="drinkJarRum">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -922,7 +946,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRumDuration" operation="add" value="1803"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRumDuration" operation="set" value="5403">
 				<requirement name="CVarCompare" cvar="$buffRumDuration" operation="GT" value="5403"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Rum"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffRum"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".7"/>		
@@ -946,7 +970,8 @@
 	</effect_group>
 </item>
 
-<item name="Tequila">
+<item name="drinkJarTequila">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -974,7 +999,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffTequilaDuration" operation="add" value="1803"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffTequilaDuration" operation="set" value="5403">
 				<requirement name="CVarCompare" cvar="$buffTequilaDuration" operation="GT" value="5403"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Tequila"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffTequila"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".7"/>		
@@ -998,7 +1023,8 @@
 	</effect_group>
 </item>
 
-<item name="Sake">
+<item name="drinkJarSake">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -1027,7 +1053,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffSakeDuration" operation="add" value="1803"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffSakeDuration" operation="set" value="5403">
 				<requirement name="CVarCompare" cvar="$buffSakeDuration" operation="GT" value="5403"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Sake"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSake"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".7"/>		
@@ -1051,7 +1077,8 @@
 	</effect_group>
 </item>
 
-<item name="Brandy">
+<item name="drinkJarBrandy">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -1079,7 +1106,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBrandyDuration" operation="add" value="1803"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBrandyDuration" operation="set" value="5403">
 				<requirement name="CVarCompare" cvar="$buffBrandyDuration" operation="GT" value="5403"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Brandy"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBrandy"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".7"/>		
@@ -1103,7 +1130,8 @@
 	</effect_group>
 </item>
 
-<item name="Blueberry Juice">
+<item name="drinkJarBlueberryJuice">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="water"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
@@ -1135,9 +1163,10 @@
 	</effect_group>
 </item>
 
-<item name="Gold Rush">
+<item name="drinkJarGoldRush">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
-	<property name="DisplayType" value="Gold Rush"/>
+	<property name="DisplayType" value="GoldRush"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
@@ -1165,7 +1194,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffGoldRushDuration" operation="add" value="303"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffGoldRushDuration" operation="set" value="903">
 				<requirement name="CVarCompare" cvar="$buffGoldRushDuration" operation="GT" value="903"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="GoldRush"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffGoldRush"/>
 	</effect_group>
 	
 	<effect_group tiered="false">
@@ -1199,9 +1228,10 @@
 	</effect_group>
 </item>
 
-<item name="Irish Coffee">
+<item name="drinkJarIrishCoffee">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
-	<property name="DisplayType" value="Irish Coffee"/>
+	<property name="DisplayType" value="IrishCoffee"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
@@ -1229,7 +1259,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffIrishCoffeeDuration" operation="add" value="603"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffIrishCoffeeDuration" operation="set" value="1803">
 				<requirement name="CVarCompare" cvar="$buffIrishCoffeeDuration" operation="GT" value="1803"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="IrishCoffee"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIrishCoffee"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".20"/>		
@@ -1253,7 +1283,8 @@
 	</effect_group>
 </item>
 
-<item name="BlackJack">
+<item name="drinkJarBlackJack">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="BlackJack"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
@@ -1282,7 +1313,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBlackJackDuration" operation="add" value="48"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBlackJackDuration" operation="set" value="138">
 				<requirement name="CVarCompare" cvar="$buffBlackJackDuration" operation="GT" value="138"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="BlackJack"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBlackJack"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".20"/>		
@@ -1306,7 +1337,8 @@
 	</effect_group>
 </item>
 
-<item name="Gin and Juice">
+<item name="drinkJarGinandJuice">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="GinJuice"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
@@ -1335,7 +1367,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffGinJuiceDuration" operation="add" value="303"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffGinJuiceDuration" operation="set" value="903">
 				<requirement name="CVarCompare" cvar="$buffGinJuiceDuration" operation="GT" value="903"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="GinJuice"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffGinJuice"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".20"/>		
@@ -1359,7 +1391,8 @@
 	</effect_group>
 </item>
 
-<item name="New Vegas Bomb">
+<item name="drinkJarNewVegasBomb">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="NewVegas"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
@@ -1389,7 +1422,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffNewVegasDuration" operation="add" value="123"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffNewVegasDuration" operation="set" value="363">
 				<requirement name="CVarCompare" cvar="$buffNewVegasDuration" operation="GT" value="363"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="NewVegas"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffNewVegas"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".20"/>		
@@ -1413,7 +1446,8 @@
 	</effect_group>
 </item>
 
-<item name="Day Walker">
+<item name="drinkJarDayWalker">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="DayWalker"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
@@ -1443,7 +1477,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDayWalkerDuration" operation="add" value="1803"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDayWalkerDuration" operation="set" value="5403">
 				<requirement name="CVarCompare" cvar="$buffDayWalkerDuration" operation="GT" value="1803"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="DayWalker"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDayWalker"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".20"/>		
@@ -1467,7 +1501,8 @@
 	</effect_group>
 </item>
 
-<item name="Zombie">
+<item name="drinkJarZombie">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="Zombie"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
@@ -1499,7 +1534,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffZombieDuration" operation="add" value="48"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffZombieDuration" operation="set" value="138">
 				<requirement name="CVarCompare" cvar="$buffZombieDuration" operation="GT" value="138"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="Zombie"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffZombie"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".20"/>		
@@ -1523,7 +1558,8 @@
 	</effect_group>
 </item>
 
-<item name="Double Tap Margarita">
+<item name="drinkJarDoubleTapMargarita">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="DoubleTap"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
@@ -1552,7 +1588,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDoubleTapDuration" operation="add" value="123"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDoubleTapDuration" operation="set" value="363">
 				<requirement name="CVarCompare" cvar="$buffDoubleTapDuration" operation="GT" value="363"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="DoubleTap"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDoubleTap"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".20"/>		
@@ -1576,7 +1612,8 @@
 	</effect_group>
 </item>
 
-<item name="Blueberry Long Island Iced Tea">
+<item name="drinkJarBlueberryLongIslandIcedTea">
+	<property name="Tags" value="drinks,fitness"/>
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="LongIsland"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
@@ -1606,7 +1643,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffLongIslandDuration" operation="add" value="38"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffLongIslandDuration" operation="set" value="128">
 				<requirement name="CVarCompare" cvar="$buffLongIslandDuration" operation="GT" value="128"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="LongIsland"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffLongIsland"/>
 	</effect_group>
 	<effect_group tiered="false">
 		<display_value name="dCureStress" value=".35"/>		
@@ -1630,8 +1667,8 @@
 	</effect_group>
 </item>
 
-<item name="Honey Ham">
-	<property name="Tags" value="food"/>
+<item name="foodHoneyHam">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="CustomIcon" value="foodPumpkinBread"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
@@ -1640,7 +1677,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="10"/> <!-- STK food -->
 	<property name="EconomicValue" value="100"/>
-	<property name="UnlockedBy" value="perkMasterChef"/>
+	<property name="UnlockedBy" value="craftingFood"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="2.1"/>
@@ -1657,8 +1694,8 @@
 	</effect_group>
 </item>
 
-<item name="Pork Chops">
-	<property name="Tags" value="food"/>
+<item name="foodPorkChops">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="CustomIcon" value="foodCharredMeat"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
@@ -1667,7 +1704,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="10"/> <!-- STK food -->
 	<property name="EconomicValue" value="70"/>
-	<property name="UnlockedBy" value="perkMasterChef"/>
+	<property name="UnlockedBy" value="craftingFood"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="2.1"/>
@@ -1684,8 +1721,8 @@
 	</effect_group>
 </item>
 
-<item name="Sushi">
-	<property name="Tags" value="food"/>
+<item name="foodSushi">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="CustomIcon" value="resourceSnowBall"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
@@ -1694,7 +1731,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="10"/> <!-- STK food -->
 	<property name="EconomicValue" value="70"/>
-	<property name="UnlockedBy" value="perkMasterChef"/>
+	<property name="UnlockedBy" value="craftingFood"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="2.1"/>
@@ -1711,8 +1748,8 @@
 	</effect_group>
 </item>
 
-<item name="Blueberry Muffins">
-	<property name="Tags" value="food"/>
+<item name="foodBlueberryMuffins">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="CustomIcon" value="foodBlueberryPie"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
@@ -1721,7 +1758,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="10"/> <!-- STK food -->
 	<property name="EconomicValue" value="60"/>
-	<property name="UnlockedBy" value="perkMasterChef"/>
+	<property name="UnlockedBy" value="craftingFood"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="2.1"/>
@@ -1738,8 +1775,8 @@
 	</effect_group>
 </item>
 
-<item name="Smoked Game">
-	<property name="Tags" value="food"/>
+<item name="foodSmokedGame">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="CustomIcon" value="foodGrilledMeat"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
@@ -1748,7 +1785,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="10"/> <!-- STK food -->
 	<property name="EconomicValue" value="90"/>
-	<property name="UnlockedBy" value="perkMasterChef"/>
+	<property name="UnlockedBy" value="craftingFood"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="2.1"/>
@@ -1765,8 +1802,8 @@
 	</effect_group>
 </item>
 
-<item name="Chicken Noodles">
-	<property name="Tags" value="food"/>
+<item name="foodChickenNoodles">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="CustomIcon" value="foodSpaghetti"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
@@ -1775,7 +1812,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="10"/> <!-- STK food -->
 	<property name="EconomicValue" value="130"/>
-	<property name="UnlockedBy" value="perkMasterChef"/>
+	<property name="UnlockedBy" value="craftingFood"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="2.1"/>
@@ -1792,8 +1829,8 @@
 	</effect_group>
 </item>
 
-<item name="Rabbit Stew">
-	<property name="Tags" value="food"/>
+<item name="foodRabbitStew">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="CustomIcon" value="foodVegetableStew"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
@@ -1802,7 +1839,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="10"/> <!-- STK food -->
 	<property name="EconomicValue" value="130"/>
-	<property name="UnlockedBy" value="perkMasterChef"/>
+	<property name="UnlockedBy" value="craftingFood"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="2.1"/>
@@ -1820,8 +1857,8 @@
 	</effect_group>
 </item>
 
-<item name="Bobcat Burgers">
-	<property name="Tags" value="food"/>
+<item name="foodBobcatBurgers">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="CustomIcon" value="foodShamSandwich"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
@@ -1830,7 +1867,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="10"/> <!-- STK food -->
 	<property name="EconomicValue" value="190"/>
-	<property name="UnlockedBy" value="perkMasterChef"/>
+	<property name="UnlockedBy" value="craftingFood"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="2.1"/>
@@ -1847,8 +1884,8 @@
 	</effect_group>
 </item>
 
-<item name="Bear Chili">
-	<property name="Tags" value="food"/>
+<item name="foodBearChili">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="CustomIcon" value="foodHoboStew"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
@@ -1857,7 +1894,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="10"/> <!-- STK food -->
 	<property name="EconomicValue" value="250"/>
-	<property name="UnlockedBy" value="perkMasterChef"/>
+	<property name="UnlockedBy" value="craftingFood"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="2.1"/>
@@ -1874,8 +1911,8 @@
 	</effect_group>
 </item>
 
-	<item name="Raw Pork">
-	<property name="Tags" value="food"/>
+	<item name="foodRawPork">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="HoldType" value="31"/>
 	<property name="CustomIcon" value="foodRawMeat"/>
 	<property name="CustomIconTint" value="d8b8bd"/>
@@ -1909,8 +1946,8 @@
 	</effect_group>
 	</item>
 	
-	<item name="Raw Game Meat">
-	<property name="Tags" value="food"/>
+	<item name="foodRawGameMeat">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="HoldType" value="31"/>
 	<property name="CustomIcon" value="foodCharredMeat"/>
 	<property name="DisplayType" value="foodRaw"/>
@@ -1943,8 +1980,8 @@
 	</effect_group>
 	</item>
 	
-	<item name="Raw Fish">
-	<property name="Tags" value="food"/>
+	<item name="foodRawFish">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="HoldType" value="31"/>
 	<property name="CustomIcon" value="foodBoiledMeat"/>
 	<property name="DisplayType" value="foodRaw"/>
@@ -1977,8 +2014,8 @@
 	</effect_group>
 	</item>
 	
-	<item name="Raw Chicken">
-	<property name="Tags" value="food"/>
+	<item name="foodRawChicken">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="HoldType" value="31"/>
 	<property name="CustomIcon" value="foodRawMeat"/>
 	<property name="CustomIconTint" value="d8b8bd"/>
@@ -2012,8 +2049,8 @@
 	</effect_group>
 	</item>
 	
-	<item name="Raw Rabbit Meat">
-	<property name="Tags" value="food"/>
+	<item name="foodRawRabbitMeat">
+	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="HoldType" value="31"/>
 	<property name="CustomIcon" value="foodRawMeat"/>
 	<property name="CustomIconTint" value="d8b8bd"/>
@@ -2047,7 +2084,7 @@
 	</effect_group>
 	</item>
 	
-	<item name="Polymer Fishing Net">
+	<item name="PolymerFishingNet">
 	<property name="HoldType" value="34"/>
 	<property name="CustomIcon" value="chainLink"/>
 	<property name="Meshfile" value="@:Other/Items/Crafting/Metal/IronBucket.fbx"/>
@@ -2063,7 +2100,7 @@
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="ExchangeItem"/>
 		<property name="Delay" value=".35"/>
-		<property name="Change_item_to" value="Raw Fish"/>
+		<property name="Change_item_to" value="RawFish"/>
 		<property name="Focused_blockname_1" value="water"/>
 		<property name="Focused_blockname_2" value="waterMoving"/>
 		<property name="Focused_blockname_3" value="waterStaticBucket"/>
@@ -2077,943 +2114,174 @@
 </insertBefore>
 
 <!--Zombie adjustments where hitting the player increases infection and stress counters-->
+	<!-- mjEdit - instead of remove and replace, we add to the same effect_group with append to maximize compatibility with other mods so this mod can be used by more people. -->
 
-<remove xpath="//item[@name='meleeHandZombie01']" />
-	<remove xpath="//item[@name='meleeHandZombieBalancingDummy']" />
-	<remove xpath="//item[@name='meleeHandZombie02']" />
-	<remove xpath="//item[@name='meleeHandZombieFeral']" />
-	<remove xpath="//item[@name='meleeHandZombie02Feral']" />
-	<remove xpath="//item[@name='meleeHandZombieBurning']" />
-	<remove xpath="//item[@name='meleeHandZombieBurningFeral']" />
-	<remove xpath="//item[@name='meleeHandZombieBurningCrawler']" />
-	<remove xpath="//item[@name='meleeHandZombieCop']" />
-	<remove xpath="//item[@name='ammoProjectileZombieVomit']" />
-	<remove xpath="//item[@name='meleeHandZombieCopFeral']" />
-	<remove xpath="//item[@name='ammoProjectileZombieVomitFeral']" />
-	<remove xpath="//item[@name='meleeHandZombieCopRadiated']" />
-	<remove xpath="//item[@name='ammoProjectileZombieVomitRadiated']" />
-	<remove xpath="//item[@name='meleeHandAnimalZombieDog']" />
-	<remove xpath="//item[@name='meleeHandZombieStrong']" />
-	<remove xpath="//item[@name='meleeHandZombieDemolition']" />
-	<remove xpath="//item[@name='meleeHandZombieStrongFeral']" />
-	<remove xpath="//item[@name='meleeHandAnimalBear']" />
-	<remove xpath="//item[@name='meleeHandAnimalZombieBear']" />
-	<remove xpath="//item[@name='meleeHandZombieHazMat']" />
-	<remove xpath="//item[@name='meleeHandZombieHazMatFeral']" />
-	<remove xpath="//item[@name='meleeHandZombieWorker']" />
-	<remove xpath="//item[@name='meleeHandZombieWorkerFeral']" />
-	<remove xpath="//item[@name='meleeHandAnimalCoyote']" />
-	<remove xpath="//item[@name='meleeHandAnimalZombieVulture']" />
-	<remove xpath="//item[@name='meleeHandAnimalZombieVultureRadiated']" />
-	<remove xpath="//item[@name='ammoProjectileVultureVomit']" />
-	<remove xpath="//item[@name='meleeHandAnimalSnake']" />
-	<remove xpath="//item[@name='meleeHandAnimalWolf']" />
-	<remove xpath="//item[@name='meleeHandAnimalDireWolf']" />
-	<remove xpath="//item[@name='meleeHandBossGrace']" />
-
-<insertAfter xpath="/items/item[@name='meleeHandPlayer']">
-	
-	
-	<item name="meleeHandZombie01">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="10"/>
-		<property name="DamageBlock" value="8"/>
-		<!--<property name="Buff" value="buffInjuryBleedingTwo,buffInfectionCatch,buffInjuryStunned01"/>-->
-	</property>
-	<effect_group name="meleeHandZombie01" tiered="false">
-		<!-- these base_add or perc_add have no effect whatsoever on zombies
-		<passive_effect name="EntityDamage" operation="base_set" value="10"/>
-		<passive_effect name="BlockDamage" operation="base_set" value="100"/>
-		-->
-
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="10"/>
-
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-
-
-
-		<!--
-		<passive_effect name="BuffProcChance" operation="base_set" value=".15" tags="buffInjuryBleedingTwo"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="buffInfectionCatch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".15" tags="buffInjuryStunned01"/>
-		-->
-
-		<!-- If the  buffInfectionCatch  buff makes it past buff resistance, this value is added to the  infectionCounter,  increasing infection level -->
-		<!-- Buckets are: -->
-		<!--InfectionRegular--><!--InfectionFeral--><!--InfectionRadiated--><!--InfectionSpecial-->
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="500"/><!--AbrasionRegular-->
-			<!-- 1 point of abrasion HP reduction = 120 seconds or points -->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieBalancingDummy">
-	<property name="Extends" value="meleeHandZombie01"/>
-	<property name="CreativeMode" value="None"/>
-	<effect_group name="meleeHandZombieBalancingDummy" tiered="false">
-
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-
-		<!-- If the  buffInfectionCatch  buff makes it past buff resistance, this value is added to the  infectionCounter,  increasing infection level -->
-		<!-- Buckets are: -->
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="500"/><!--AbrasionRegular-->
-
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="200"><!--InfectionFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="600"/><!--AbrasionFeral-->
-
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="200"><!--InfectionRadiated-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="600"/><!--AbrasionRadiated-->
-
-
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="300"><!--InfectionSpecialHazmatReg-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="500"><!--InfectionSpecialHazmatFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-
-			<!-- 1 point of abrasion HP reduction = 120 seconds or points -->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombie02"> <!-- crawler. This hand item is automatically used (hardcoded) if a zombie turns into a crawler. Can be overridden in entityclasses. See zombieBurnt. -->
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="24"/>
-	<property class="Action0">
-		<property name="Delay" value="2.0"/> <!-- obsolete if rounds per minute exists -->
-	</property>
-	<effect_group name="meleeHandZombie02" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="30"/>  A16 2 -->
-
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-
-		<!--
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker,player" buff="buffLegSprainedFallTrigger">
-			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
-		</triggered_effect>
-		-->
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="500"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieFeral">
-	<property name="Extends" value="meleeHandZombie01"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="24"/>
-	</property>
-	<effect_group name="meleeHandZombieFeral" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="200"><!--InfectionFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="600"/><!--AbrasionFeral-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombie02Feral">
-	<property name="Extends" value="meleeHandZombie02"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="24"/>
-	</property>
-	<effect_group name="meleeHandZombie02Feral" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="30"/>  A16 2 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="200"><!--InfectionFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="600"/><!--AbrasionFeral-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieBurning">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="Class" value="Melee"/>
-		<property name="Sphere" value=".4"/>
-		<property name="DamageEntity" value="12"/>
-		<property name="DamageBlock" value="8"/>
-		<!--
-		<property name="Buff" value="buffBurningZombie,buffInfectionCatch,buffInjuryStunned01"/>
-		-->
-
-	</property>
-	<effect_group name="meleeHandZombieBurning" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8
-		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffBurningZombie"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="buffInfectionCatch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".15" tags="buffInjuryStunned01"/>-->
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="500"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieBurningFeral">
-	<property name="Extends" value="meleeHandZombieBurning"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="24"/>
-		<property name="DamageBlock" value="24"/>
-	</property>
-	<effect_group name="meleeHandZombieBurningFeral" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="200"><!--InfectionFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="600"/><!--AbrasionFeral-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieBurningCrawler">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="24"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="24"/>
-		<property name="DamageBlock" value="24"/>
-		<property name="Delay" value="2.0"/> <!-- obsolete if rounds per minute exists -->
-		<!--<property name="Buff" value="buffInfectionCatch,buffBurningZombie"/>-->
-	</property>
-	<effect_group name="meleeHandZombieBurningCrawler" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="30"/>  A16 2
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker,player" buff="buffLegSprainedFallTrigger">
-			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
-		</triggered_effect>-->
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="500"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieCop">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="Degradation" value="99999" param1="true"/>
-	<property class="Action0">
-		<property name="Range" value="1.75"/>
-		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="100"/>
-	</property>
-	<property class="Action1"> <!-- UseAction -->
-		<property name="Class" value="Vomit"/>
-		<property name="Hitmask_override" value="Arrow"/>
-		<property name="Delay" value=".3"/> <!-- obsolete if rounds per minute exists -->
-		<property name="Range" value="200"/>
-		<property name="Infinite_ammo" value="true"/>
-		<property name="Magazine_items" value="ammoProjectileZombieVomit"/>
-		<property name="Sound_warning" value="hulkvomitwarning"/>
-		<property name="Sound_start" value="hulkvomitattack"/>
-		<property name="Sound_repeat" value=""/>
-		<property name="Sound_end" value=""/>
-		<property name="Sound_empty" value=""/>
-		<property name="Sound_reload" value=""/>
-	</property>
-	<effect_group name="meleeHandZombieCop" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
-		<passive_effect name="MaxRange" operation="base_set" value="100"/>
-		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
-		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
-		<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
-
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="200"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="500"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
-<item name="ammoProjectileZombieVomit">
-	<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Vomit/vomitBulbPrefab.prefab"/>
-	<property name="Material" value="Morganic"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action1">
-		<property name="Class" value="Projectile"/>
-		<property name="DamageEntity" value="10"/>
-		<property name="DamageBlock" value="120"/>
-		<property name="Explosion.ParticleIndex" value="7"/>
-		<property name="Velocity" value="18"/>
-		<property name="FlyTime" value="2"/>
-		<property name="LifeTime" value="4"/>
-		<property name="CollisionRadius" value=".5"/>
-		<property name="DamageBonus.earth" value="0"/>
-		<property name="Buff" value="buffInfectionCatch"/>
-	</property>
-	<effect_group name="ammoProjectileZombieVomit" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".30" tags="buffInfectionCatch"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="500"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1000"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieCopFeral">
-	<property name="Extends" value="meleeHandZombieCop"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="40"/>
-		<property name="DamageBlock" value="200"/>
-	</property>
-	<property class="Action1"> <!-- Fire action -->
-		<property name="Magazine_items" value="ammoProjectileZombieVomitFeral"/>
-	</property>
-	<effect_group name="meleeHandZombieCopFeral" tiered="false">
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
-		<passive_effect name="BurstRoundCount" operation="base_set" value="3"/>
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4"/>
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="10"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="400"><!--InfectionFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="500"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="800"/><!--AbrasionFeral-->
-	</effect_group>
-</item>
-
-<item name="ammoProjectileZombieVomitFeral">
-	<property name="Extends" value="ammoProjectileZombieVomit"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action1">
-		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="240"/>
-		<property name="Velocity" value="18"/>
-		<property name="FlyTime" value="2"/>
-		<property name="LifeTime" value="4"/>
-		<property name="Explosion.ParticleIndex" value="7"/>
-		<property name="Explosion.RadiusBlocks" value="2"/>
-		<property name="Explosion.RadiusEntities" value="1"/>
-		<property name="Explosion.DamageBonus.water" value="0"/>
-		<property name="Explosion.DamageBonus.earth" value="0"/>
-	</property>
-	<effect_group name="ammoProjectileZombieVomitFeral" tiered="false">
-		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInfectionCatch"/>
-		<passive_effect name="BlockDamage" operation="base_set" value="105"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="1"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="600"><!--InfectionFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="500"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1200"/><!--AbrasionFeral-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieCopRadiated">
-	<property name="Extends" value="meleeHandZombieCopFeral"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action1">
-		<property name="Magazine_items" value="ammoProjectileZombieVomitRadiated"/>
-	</property>
-	<effect_group name="meleeHandZombieCopRadiated" tiered="false">
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
-		<passive_effect name="BurstRoundCount" operation="base_set" value="6"/>
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="10"/>
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="40"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="600"><!--InfectionRadiated-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="500"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1200"/><!--AbrasionRadiated-->
-	</effect_group>
-</item>
-
-<item name="ammoProjectileZombieVomitRadiated">
-	<property name="Extends" value="ammoProjectileZombieVomit"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action1">
-		<property name="DamageEntity" value="25"/>
-		<property name="DamageBlock" value="240"/>
-		<property name="Velocity" value="18"/>
-		<property name="FlyTime" value="2"/>
-		<property name="LifeTime" value="4"/>
-		<property name="Explosion.ParticleIndex" value="7"/>
-		<property name="Explosion.RadiusBlocks" value="2"/>
-		<property name="Explosion.RadiusEntities" value="1"/>
-		<property name="Explosion.DamageBonus.water" value="0"/>
-		<property name="Explosion.DamageBonus.earth" value="0"/>
-	</property>
-	<effect_group name="ammoProjectileZombieVomitRadiated" tiered="false">
-		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInfectionCatch"/>
-		<passive_effect name="BlockDamage" operation="base_set" value="145"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="1"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="600"><!--InfectionRadiated-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="500"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1200"/><!--AbrasionRadiated-->
-	</effect_group>
-</item>
-
-<item name="meleeHandAnimalZombieDog">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="35"/>
-	<property class="Action0">
-		<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
-		<property name="DamageEntity" value="8"/>
-		<property name="DamageBlock" value="14"/>
-	</property>
-	<effect_group name="meleeHandAnimalZombieDog" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>  A16 .7 -->
-		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="200"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="400"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieStrong">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="20"/>
-	</property>
-	<effect_group name="meleeHandZombieStrong" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="200"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="500"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieDemolition">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="500"/>
-	</property>
-	<effect_group name="meleeHandZombieStrong" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="800"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieStrongFeral">
-	<property name="Extends" value="meleeHandZombieStrong"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="40"/>
-		<property name="DamageBlock" value="60"/>
-	</property>
-	<effect_group name="meleeHandZombieStrongFeral" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="300"><!--InfectionFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="400"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="600"/><!--AbrasionFeral-->
-	</effect_group>
-</item>
-
-<item name="meleeHandAnimalBear">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="46"/>
-	<property class="Action0">
-		<property name="Delay" value="1.5"/> <!-- obsolete if rounds per minute exists -->
-		<property name="Range" value="3.6"/>
-		<property name="Sphere" value=".3"/>
-		<property name="DamageEntity" value="30"/>
-		<property name="DamageBlock" value="40"/>
-	</property>
-	<effect_group name="meleeHandAnimalBear" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="40"/>  A16 1.5 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="700"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-	</effect_group>
-</item>
-
-<item name="meleeHandAnimalZombieBear">
-	<property name="Extends" value="meleeHandAnimalBear"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="Range" value="3.6"/>
-		<property name="DamageEntity" value="50"/>
-		<property name="DamageBlock" value="80"/>
-	</property>
-	<effect_group name="meleeHandAnimalZombieBear" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="40"/>  A16 1.5 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="500"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="700"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieHazMat">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="9"/>
-	<effect_group name="meleeHandZombieHazMat" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="500"><!--InfectionSpecialHazmatReg-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieHazMatFeral">
-	<property name="Extends" value="meleeHandZombieHazMat"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="9"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="24"/>
-	</property>
-	<effect_group name="meleeHandZombieHazMatFeral" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="500"><!--InfectionSpecialHazmatFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieWorker">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="9"/>
-	<property class="Action0">
-		<property name="DamageBlock" value="40"/>
-	</property>
-	<effect_group name="meleeHandZombieWorker" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="500"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieWorkerFeral">
-	<property name="Extends" value="meleeHandZombieWorker"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="9"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="120"/>
-	</property>
-	<effect_group name="meleeHandZombieWorkerFeral" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="200"><!--InfectionFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="600"/><!--AbrasionFeral-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieFootballPlayer">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="9"/>
-	<effect_group name="meleeHandZombieFootballPlayer" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="500"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieFootballPlayerFeral">
-	<property name="Extends" value="meleeHandZombieFootballPlayer"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="9"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="24"/>
-	</property>
-	<effect_group name="meleeHandZombieFootballPlayerFeral" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="200"><!--InfectionFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="600"/><!--AbrasionFeral-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieStripper">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="8"/>
-	</property>
-	<effect_group name="meleeHandZombieStripper" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="100"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="500"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
-<item name="meleeHandZombieStripperFeral">
-	<property name="Extends" value="meleeHandZombieStripper"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="16"/>
-		<property name="DamageBlock" value="24"/>
-	</property>
-	<effect_group name="meleeHandZombieStripperFeral" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="200"><!--InfectionFeral-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="600"/><!--AbrasionFeral-->
-	</effect_group>
-</item>
-
-<item name="meleeHandAnimalCoyote">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="35"/>
-	<property class="Action0">
-		<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
-		<property name="Range" value="1.4"/>
-		<property name="DamageEntity" value="10"/>
-		<property name="DamageBlock" value="6"/>
-	</property>
-	<effect_group name="meleeHandAnimalCoyote" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>  A16 .7 -->
-		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-	</effect_group>
-</item>
-
-<item name="meleeHandAnimalZombieVulture">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="35"/>
-	<property class="Action0">
-		<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
-		<property name="DamageEntity" value="8"/>
-		<property name="DamageBlock" value="8"/>
-	</property>
-	<effect_group name="meleeHandAnimalZombieVulture" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="500"><!--InfectionRadiated-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1000"/><!--AbrasionRadiated-->
-	</effect_group>
-</item>
-
-<item name="meleeHandAnimalZombieVultureRadiated">
-	<property name="Extends" value="meleeHandAnimalZombieVulture"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="Delay" value=".7"/>
-		<property name="DamageEntity" value="10"/>
-		<property name="DamageBlock" value="32"/>
-	</property>
-	<property class="Action1">
-		<property name="Class" value="Vomit"/>
-		<property name="Hitmask_override" value="Arrow"/>
-		<property name="Delay" value=".5"/>
-		<property name="Infinite_ammo" value="true"/>
-		<property name="Magazine_items" value="ammoProjectileVultureVomit"/>
-		<property name="Sound_warning" value="vulturevomitwarning"/>
-		<property name="Sound_start" value="vulturevomitattack"/>
-		<property name="Sound_repeat" value=""/>
-		<property name="Sound_end" value=""/>
-		<property name="Sound_empty" value=""/>
-		<property name="Sound_reload" value=""/>
-	</property>
-	<effect_group name="meleeHandAnimalZombieVulture" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
-		<passive_effect name="BurstRoundCount" operation="base_set" value="2"/>
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="6"/>
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="15"/>
-		<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
-		<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
-		<passive_effect name="MaxRange" operation="base_set" value="50"/>
-
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="600"><!--InfectionRadiated-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1200"/><!--AbrasionRadiated-->
-	</effect_group>
-</item>
-
-<item name="ammoProjectileVultureVomit">
-	<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Vomit/vomitBulbPrefab.prefab"/>
-	<property name="Material" value="Morganic"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action1">
-		<property name="Class" value="Projectile"/>
-		<property name="DamageEntity" value="15"/>
-		<property name="DamageBlock" value="12"/>
-		<property name="Explosion.ParticleIndex" value="7"/>
-		<property name="Velocity" value="13"/>
-		<property name="FlyTime" value="6"/>
-		<property name="LifeTime" value="8"/>
-		<property name="CollisionRadius" value=".5"/>
-		<property name="Buff" value="buffInfectionCatch"/>
-	</property>
-	<effect_group name="ammoProjectileVultureVomit" tiered="false">
-		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInfectionCatch"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="600"><!--InfectionRadiated-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1200"/><!--AbrasionRadiated-->
-	</effect_group>
-</item>
-
-<item name="meleeHandAnimalSnake">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="55"/>
-	<property class="Action0">
-		<property name="Delay" value="2.5"/>
-		<property name="Range" value="1.2"/>
-		<property name="DamageEntity" value="10"/>
-		<property name="DamageBlock" value="2"/>
-	</property>
-	<effect_group name="meleeHandAnimalSnake" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-	</effect_group>
+<append xpath="//item[@name='meleeHandZombie01']/effect_group[1]">
 	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-</item>
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+	<!-- <append xpath="//item[@name='meleeHandZombieBalancingDummy']/effect_group[1]">nothingGetsAddedSoCommentedOut</append> -->
+	
+<append xpath="//item[@name='meleeHandZombie02']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombieFeral']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombie02Feral']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombieShort']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombieShortFeral']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombieBurning']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombieBurningFeral']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombieBurningCrawler']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombieCop']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='ammoProjectileZombieVomit']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombieCopFeral']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="500"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='ammoProjectileZombieVomitFeral']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="500"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombieCopRadiated']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="500"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='ammoProjectileZombieVomitRadiated']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="500"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandzombieMutated']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandzombieMutatedFeral']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="400"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandzombieMutatedRadiated']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="500"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='ammoProjectileZombieMutated']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="500"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+				
+<append xpath="//item[@name='meleeHandAnimalZombieDog']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombieStrong']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+		
+<append xpath="//item[@name='meleeHandZombieDemolition']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="800"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandZombieStrongFeral']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="400"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandAnimalBear']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="700"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandAnimalLittleBear']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="400"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandAnimalZombieBear']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="700"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandZombieHazMat']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandZombieHazMatFeral']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandZombieWorker']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandZombieWorkerFeral']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandZombiePartyGirl']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandZombiePartyGirlFeral']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandAnimalCoyote']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandAnimalZombieVulture']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandAnimalZombieVultureRadiated']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='ammoProjectileVultureVomit']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandAnimalSnake']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandAnimalWolf']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandAnimalDireWolf']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandAnimalMountainLion']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
+	
+<append xpath="//item[@name='meleeHandBossGrace']/effect_group[1]">
+	<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
+		<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect></append>
 
-<item name="meleeHandAnimalWolf">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="35"/>
-	<property class="Action0">
-		<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
-		<property name="Range" value="1.7"/>
-		<property name="DamageEntity" value="14"/>
-		<property name="DamageBlock" value="16"/>
-	</property>
-	<effect_group name="meleeHandAnimalWolf" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>  A16 .7 -->
-		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="200"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-	</effect_group>
-</item>
-
-<item name="meleeHandAnimalDireWolf">
-	<property name="Extends" value="meleeHandAnimalWolf"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
-		<property name="Range" value="2.2"/>
-		<property name="DamageEntity" value="22"/>
-		<property name="DamageBlock" value="28"/>
-	</property>
-	<effect_group name="meleeHandAnimalWolf" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-	</effect_group>
-</item>
-
-<item name="meleeHandBossGrace">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="35"/>
-	<property class="Action0">
-		<property name="Delay" value=".85"/>
-		<property name="Range" value="3.4"/>
-		<property name="Sphere" value=".2"/>
-		<property name="DamageEntity" value="35"/>
-		<property name="DamageBlock" value="100"/>
-	</property>
-	<effect_group name="meleeHandAnimalBear" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="StressedCounter" operation="add" value="300"><!--StressedRegular-->
-			<requirement name="CVarCompare" target="other" cvar="StressedCounter" operation="GT" value="0"/></triggered_effect>
-	</effect_group>
-</item>
-
-</insertAfter>
 
 	
 

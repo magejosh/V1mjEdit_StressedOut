@@ -1,30 +1,32 @@
 <StressedOut>
+	
+	<!-- mjEdit - added the harvest lines to hook the new plants into the vanilla farming perks so you will get the increased returns from them like living off the land says you will. I left the DowngradeBlock property on these though, as these are pretty much required by and large to keep managing your stress levels, so losing the seeds from harvest will be pretty harsh. IMO at least.  -->
 <insertBefore xpath="/blocks/block[@name='decoPumpkinJackOLantern']">
 
-	<block name="Tobacco Sprout">
+	<block name="plantedTobaccoSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="plantedPotato3Harvest"/>
-		<property name="PlantGrowing.Next" value="Tobacco Growing"/>
+		<property name="PlantGrowing.Next" value="plantedTobaccoGrowing"/>
 		<property name="UnlockedBy" value="perkBrewmaster"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab"/>
 		<property name="PlaceAsRandomRotation" value="true"/>
 		<property name="Group" value="Food/Cooking"/>
-		<drop event="Destroy" name="Tobacco Sprout" count="1"/>
+		<drop event="Destroy" name="plantedTobaccoSprout" count="1"/>
 		<property name="SortOrder1" value="B966"/>
 		<property name="SortOrder2" value="0000"/>
 		<property name="Group" value="Food/Cooking"/>
 	</block>
 
-	<block name="Tobacco Growing">
+	<block name="plantedTobaccoGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="plantedPotato3Harvest"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
-		<property name="PlantGrowing.Next" value="Tobacco Plant"/>
-		<drop event="Destroy" name="Tobacco Sprout" count="1"/>
+		<property name="PlantGrowing.Next" value="plantedTobaccoPlant"/>
+		<drop event="Destroy" name="plantedTobaccoSprout" count="1"/>
 		<property name="SortOrder1" value="B966"/>
 		<property name="SortOrder2" value="0001"/>
 	</block>
@@ -39,18 +41,22 @@
 		<property name="SortOrder2" value="0002"/>
 	</block>
 
-	<block name="Tobacco Plant">
+	<block name="plantedTobaccoPlant">
 		<property name="Extends" value="plantedTobacco3Harvest"/>
-		<property name="DescriptionKey" value="Tobacco Plant"/>
+		<property name="DescriptionKey" value="plantedTobaccoPlant"/>
 		<property name="CustomIcon" value="plantedPotato3Harvest"/>
 		<property name="CreativeMode" value="None"/>
-		<drop event="Harvest" name="Tobacco" count="1" tag="cropHarvest"/>
-		<property name="DowngradeBlock" value="Tobacco Sprout"/>
+		<drop event="Harvest" name="foodCropTobacco" count="1" tag="cropHarvest"/>
+		<drop event="Harvest" name="foodCropTobacco" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Harvest" name="foodCropTobacco" count="1" tag="farmerBonusHarvest"/>
+		<drop event="Harvest" name="plantedTobaccoSprout" count="1" tag="farmerBonusSeed"/>
+		<drop event="Destroy" name="plantedTobaccoSprout" count="1" prob="0.5"/>
+		<property name="DowngradeBlock" value="plantedTobaccoSprout"/>
 		<property name="SortOrder1" value="B966"/>
 		<property name="SortOrder2" value="0003"/>
 	</block>
 	
-	<block name="Sativa Sprout">
+	<block name="plantedSativaSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="CreativeMode" value="Player"/>
@@ -58,22 +64,22 @@
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
 		<property name="PlaceAsRandomRotation" value="true"/>
-		<property name="PlantGrowing.Next" value="Sativa Growing"/>
+		<property name="PlantGrowing.Next" value="plantedSativaGrowing"/>
 		<property name="Group" value="Food/Cooking"/>
-		<drop event="Destroy" name="Sativa Sprout" count="1"/>
+		<drop event="Destroy" name="plantedSativaSprout" count="1"/>
 		<property name="SortOrder1" value="B967"/>
 		<property name="SortOrder2" value="0000"/>
 		<property name="Group" value="Food/Cooking"/>
 	</block>
 
-	<block name="Sativa Growing">
+	<block name="plantedSativaGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/blueberry_plant_growthPrefab"/>
-		<property name="PlantGrowing.Next" value="Sativa Plant"/>
-		<drop event="Destroy" name="Sativa Sprout" count="1"/>
+		<property name="PlantGrowing.Next" value="plantedSativaPlant"/>
+		<drop event="Destroy" name="plantedSativaSprout" count="1"/>
 		<property name="SortOrder1" value="B967"/>
 		<property name="SortOrder2" value="0001"/>
 	</block>
@@ -88,18 +94,22 @@
 		<property name="SortOrder2" value="0002"/>
 	</block>
 
-	<block name="Sativa Plant">
+	<block name="plantedSativaPlant">
 		<property name="Extends" value="plantedSativa3Harvest"/>
-		<property name="DescriptionKey" value="Sativa Plant"/>
+		<property name="DescriptionKey" value="plantedSativaPlant"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="CreativeMode" value="None"/>
-		<drop event="Harvest" name="Sativa Bud" count="1" tag="cropHarvest"/>
-		<property name="DowngradeBlock" value="Sativa Sprout"/>
+		<drop event="Harvest" name="foodCropSativaBud" count="1" tag="cropHarvest"/>
+		<drop event="Harvest" name="foodCropSativaBud" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Harvest" name="foodCropSativaBud" count="1" tag="farmerBonusHarvest"/>
+		<drop event="Harvest" name="plantedSativaSprout" count="1" tag="farmerBonusSeed"/>
+		<drop event="Destroy" name="plantedSativaSprout" count="1" prob="0.5"/>
+		<property name="DowngradeBlock" value="plantedSativaSprout"/>
 		<property name="SortOrder1" value="B967"/>
 		<property name="SortOrder2" value="0003"/>
 	</block>
 	
-	<block name="Indica Sprout">
+	<block name="plantedIndicaSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="CreativeMode" value="Player"/>
@@ -107,22 +117,22 @@
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
 		<property name="PlaceAsRandomRotation" value="true"/>
-		<property name="PlantGrowing.Next" value="Indica Growing"/>
+		<property name="PlantGrowing.Next" value="plantedIndicaGrowing"/>
 		<property name="Group" value="Food/Cooking"/>
-		<drop event="Destroy" name="Indica Sprout" count="1"/>
+		<drop event="Destroy" name="plantedIndicaSprout" count="1"/>
 		<property name="SortOrder1" value="B968"/>
 		<property name="SortOrder2" value="0000"/>
 		<property name="Group" value="Food/Cooking"/>
 	</block>
 
-	<block name="Indica Growing">
+	<block name="plantedIndicaGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/blueberry_plant_growthPrefab"/>
-		<property name="PlantGrowing.Next" value="Indica Plant"/>
-		<drop event="Destroy" name="Indica Sprout" count="1"/>
+		<property name="PlantGrowing.Next" value="plantedIndicaPlant"/>
+		<drop event="Destroy" name="plantedIndicaSprout" count="1"/>
 		<property name="SortOrder1" value="B968"/>
 		<property name="SortOrder2" value="0001"/>
 	</block>
@@ -137,39 +147,43 @@
 		<property name="SortOrder2" value="0002"/>
 	</block>
 
-	<block name="Indica Plant">
+	<block name="plantedIndicaPlant">
 		<property name="Extends" value="plantedIndica3Harvest"/>
-		<property name="DescriptionKey" value="Indica Plant"/>
+		<property name="DescriptionKey" value="plantedIndicaPlant"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="CreativeMode" value="None"/>
-		<drop event="Harvest" name="Indica Bud" count="1" tag="cropHarvest"/>
-		<property name="DowngradeBlock" value="Indica Sprout"/>
+		<drop event="Harvest" name="foodCropIndicaBud" count="1" tag="cropHarvest"/>
+		<drop event="Harvest" name="foodCropIndicaBud" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Harvest" name="foodCropIndicaBud" count="1" tag="farmerBonusHarvest"/>
+		<drop event="Harvest" name="plantedIndicaSprout" count="1" tag="farmerBonusSeed"/>
+		<drop event="Destroy" name="plantedIndicaSprout" count="1" prob="0.5"/>
+		<property name="DowngradeBlock" value="plantedIndicaSprout"/>
 		<property name="SortOrder1" value="B968"/>
 		<property name="SortOrder2" value="0003"/>
 	</block>
 	
-	<block name="Sugar Cane Sprout">
+	<block name="plantedSugarCaneSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
-		<property name="CustomIcon" value="conduit01"/>
+		<property name="CustomIcon" value="plantedCorn2"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="UnlockedBy" value="perkBrewmaster"/>
 		<property name="Texture" value="392"/>
 		<property name="PlaceAsRandomRotation" value="true"/>
-		<property name="PlantGrowing.Next" value="Sugar Cane Growing"/>
+		<property name="PlantGrowing.Next" value="plantedSugarCaneGrowing"/>
 		<property name="Group" value="Food/Cooking"/>
-		<drop event="Destroy" name="Sugar Cane Sprout" count="1"/>
+		<drop event="Destroy" name="plantedSugarCaneSprout" count="1"/>
 		<property name="SortOrder1" value="B969"/>
 		<property name="SortOrder2" value="0000"/>
 		<property name="Group" value="Food/Cooking"/>
 	</block>
 
-	<block name="Sugar Cane Growing">
+	<block name="plantedSugarCaneGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="CreativeMode" value="None"/>
-		<property name="CustomIcon" value="conduit01"/>
+		<property name="CustomIcon" value="plantedCornDeadSmall"/>
 		<property name="Texture" value="392"/>
-		<property name="PlantGrowing.Next" value="Sugar Cane Plant"/>
-		<drop event="Destroy" name="Sugar Cane Sprout" count="1"/>
+		<property name="PlantGrowing.Next" value="plantedSugarCanePlant"/>
+		<drop event="Destroy" name="plantedSugarCaneSprout" count="1"/>
 		<property name="SortOrder1" value="B969"/>
 		<property name="SortOrder2" value="0001"/>		
 	</block>
@@ -177,24 +191,28 @@
 	<block name="plantedSugarCane3Harvest">
 		<property name="Extends" value="cropsHarvestableMaster"/>
 		<property name="CreativeMode" value="Dev"/>
-		<property name="CustomIcon" value="conduit01"/>
+		<property name="CustomIcon" value="plantedCornDeadMedium"/>
 		<property name="Texture" value="351"/>
 		<property name="SortOrder1" value="B969"/>
 		<property name="SortOrder2" value="0002"/>
 	</block>
 
-	<block name="Sugar Cane Plant">
+	<block name="plantedSugarCanePlant">
 		<property name="Extends" value="plantedSugarCane3Harvest"/>
-		<property name="DescriptionKey" value="Sugar Cane Plant"/>
+		<property name="DescriptionKey" value="plantedSugarCanePlant"/>
 		<property name="CustomIcon" value="conduit01"/>
 		<property name="CreativeMode" value="None"/>
-		<drop event="Harvest" name="Sugar Cane" count="1" tag="cropHarvest"/>
-		<property name="DowngradeBlock" value="Sugar Cane Sprout"/>
+		<drop event="Harvest" name="foodCropSugarCane" count="1" tag="cropHarvest"/>
+		<drop event="Harvest" name="foodCropSugarCane" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Harvest" name="foodCropSugarCane" count="1" tag="farmerBonusHarvest"/>
+		<drop event="Harvest" name="plantedSugarCaneSprout" count="1" tag="farmerBonusSeed"/>
+		<drop event="Destroy" name="plantedSugarCaneSprout" count="1" prob="0.5"/>
+		<property name="DowngradeBlock" value="plantedSugarCaneSprout"/>
 		<property name="SortOrder1" value="B969"/>
 		<property name="SortOrder2" value="0003"/>
 	</block>
 	
-	<block name="Agave Sprout">
+	<block name="plantedAgaveSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 		<property name="CustomIcon" value="plantedYucca3Harvest"/>
 		<property name="CreativeMode" value="Player"/>
@@ -202,22 +220,22 @@
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/plant_aloe1_Prefab"/>
 		<property name="PlaceAsRandomRotation" value="true"/>
-		<property name="PlantGrowing.Next" value="Agave Growing"/>
+		<property name="PlantGrowing.Next" value="plantedAgaveGrowing"/>
 		<property name="Group" value="Food/Cooking"/>
-		<drop event="Destroy" name="Agave Sprout" count="1"/>
+		<drop event="Destroy" name="plantedAgaveSprout" count="1"/>
 		<property name="SortOrder1" value="B970"/>
 		<property name="SortOrder2" value="0000"/>
 		<property name="Group" value="Food/Cooking"/>
 	</block>
 
-	<block name="Agave Growing">
+	<block name="plantedAgaveGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="plantedYucca3Harvest"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/plant_aloe2_Prefab"/>
-		<property name="PlantGrowing.Next" value="Agave Plant"/>
-		<drop event="Destroy" name="Agave Sprout" count="1"/>
+		<property name="PlantGrowing.Next" value="plantedAgavePlant"/>
+		<drop event="Destroy" name="plantedAgaveSprout" count="1"/>
 		<property name="SortOrder1" value="B970"/>
 		<property name="SortOrder2" value="0001"/>
 	</block>
@@ -232,18 +250,22 @@
 		<property name="SortOrder2" value="0002"/>
 	</block>
 
-	<block name="Agave Plant">
+	<block name="plantedAgavePlant">
 		<property name="Extends" value="plantedAgave3Harvest"/>
-		<property name="DescriptionKey" value="Agave Plant"/>
+		<property name="DescriptionKey" value="plantedAgavePlant"/>
 		<property name="CustomIcon" value="plantedYucca3Harvest"/>
 		<property name="CreativeMode" value="None"/>
-		<drop event="Harvest" name="Agave" count="1" tag="cropHarvest"/>
-		<property name="DowngradeBlock" value="Agave Sprout"/>
+		<drop event="Harvest" name="foodCropAgave" count="1" tag="cropHarvest"/>
+		<drop event="Harvest" name="foodCropAgave" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Harvest" name="foodCropAgave" count="1" tag="farmerBonusHarvest"/>
+		<drop event="Harvest" name="plantedAgaveSprout" count="1" tag="farmerBonusSeed"/>
+		<drop event="Destroy" name="plantedAgaveSprout" count="1" prob="0.5"/>
+		<property name="DowngradeBlock" value="plantedAgaveSprout"/>
 		<property name="SortOrder1" value="B970"/>
 		<property name="SortOrder2" value="0003"/>
 	</block>
 	
-	<block name="Cocoa Sprout">
+	<block name="plantedCocoaSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 		<property name="CustomIcon" value="cropsHarvestableMaster"/>
 		<property name="CreativeMode" value="Player"/>
@@ -251,22 +273,22 @@
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/plant_yucca_sproutPrefab"/>
 		<property name="PlaceAsRandomRotation" value="true"/>
-		<property name="PlantGrowing.Next" value="Cocoa Growing"/>
+		<property name="PlantGrowing.Next" value="plantedCocoaGrowing"/>
 		<property name="Group" value="Food/Cooking"/>
-		<drop event="Destroy" name="Cocoa Sprout" count="1"/>
+		<drop event="Destroy" name="plantedCocoaSprout" count="1"/>
 		<property name="SortOrder1" value="B971"/>
 		<property name="SortOrder2" value="0000"/>
 		<property name="Group" value="Food/Cooking"/>
 	</block>
 
-	<block name="Cocoa Growing">
+	<block name="plantedCocoaGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="cropsHarvestableMaster"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/plant_yucca_growthPrefab"/>
-		<property name="PlantGrowing.Next" value="Cocoa Plant"/>
-		<drop event="Destroy" name="Cocoa Sprout" count="1"/>
+		<property name="PlantGrowing.Next" value="plantedCocoaPlant"/>
+		<drop event="Destroy" name="plantedCocoaSprout" count="1"/>
 		<property name="SortOrder1" value="B971"/>
 		<property name="SortOrder2" value="0001"/>
 	</block>
@@ -281,18 +303,22 @@
 		<property name="SortOrder2" value="0002"/>
 	</block>
 
-	<block name="Cocoa Plant">
+	<block name="plantedCocoaPlant">
 		<property name="Extends" value="plantedCocoa3Harvest"/>
-		<property name="DescriptionKey" value="Cocoa Plant"/>
+		<property name="DescriptionKey" value="plantedCocoaPlant"/>
 		<property name="CustomIcon" value="cropsHarvestableMaster"/>
 		<property name="CreativeMode" value="None"/>
-		<drop event="Harvest" name="Cocoa" count="1" tag="cropHarvest"/>
-		<property name="DowngradeBlock" value="Cocoa Sprout"/>
+		<drop event="Harvest" name="foodCropCocoa" count="1" tag="cropHarvest"/>
+		<drop event="Harvest" name="foodCropCocoa" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Harvest" name="foodCropCocoa" count="1" tag="farmerBonusHarvest"/>
+		<drop event="Harvest" name="plantedCocoaSprout" count="1" tag="farmerBonusSeed"/>
+		<drop event="Destroy" name="plantedCocoaSprout" count="1" prob="0.5"/>
+		<property name="DowngradeBlock" value="plantedCocoaSprout"/>
 		<property name="SortOrder1" value="B971"/>
 		<property name="SortOrder2" value="0003"/>
 	</block>
 	
-	<block name="Barley Sprout">
+	<block name="plantedBarleySprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 		<property name="CustomIcon" value="treeForestGrassDiagonal"/>
 		<property name="CreativeMode" value="Player"/>
@@ -301,23 +327,23 @@
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkGreenSmallPrefab"/>
 		<property name="MultiBlockDim" value="1,3,1"/>
 		<property name="PlaceAsRandomRotation" value="true"/>
-		<property name="PlantGrowing.Next" value="Barley Growing"/>
+		<property name="PlantGrowing.Next" value="plantedBarleyGrowing"/>
 		<property name="Group" value="Food/Cooking"/>
-		<drop event="Destroy" name="Barley Sprout" count="1"/>
+		<drop event="Destroy" name="plantedBarleySprout" count="1"/>
 		<property name="SortOrder1" value="B972"/>
 		<property name="SortOrder2" value="0000"/>
 		<property name="Group" value="Food/Cooking"/>
 	</block>
 
-	<block name="Barley Growing">
+	<block name="plantedBarleyGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="treeForestGrassDiagonal"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkGreenMediumPrefab"/>
 		<property name="MultiBlockDim" value="1,3,1"/>
-		<property name="PlantGrowing.Next" value="Barley Plant"/>
-		<drop event="Destroy" name="Barley Sprout" count="1"/>
+		<property name="PlantGrowing.Next" value="plantedBarleyPlant"/>
+		<drop event="Destroy" name="plantedBarleySprout" count="1"/>
 		<property name="SortOrder1" value="B972"/>
 		<property name="SortOrder2" value="0001"/>
 	</block>
@@ -333,21 +359,25 @@
 		<property name="SortOrder2" value="0002"/>
 	</block>
 
-	<block name="Barley Plant">
+	<block name="plantedBarleyPlant">
 		<property name="Extends" value="plantedBarley3Harvest"/>
-		<property name="DescriptionKey" value="Barley Plant"/>
+		<property name="DescriptionKey" value="plantedBarleyPlant"/>
 		<property name="CustomIcon" value="treeForestGrassDiagonal"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkBrownPrefab"/>
 		<property name="MultiBlockDim" value="1,3,1"/>
-		<drop event="Harvest" name="Barley" count="1" tag="cropHarvest"/>
-		<property name="DowngradeBlock" value="Barley Sprout"/>
+		<drop event="Harvest" name="foodCropBarley" count="1" tag="cropHarvest"/>
+		<drop event="Harvest" name="foodCropBarley" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Harvest" name="foodCropBarley" count="1" tag="farmerBonusHarvest"/>
+		<drop event="Harvest" name="plantedBarleySprout" count="1" tag="farmerBonusSeed"/>
+		<drop event="Destroy" name="plantedBarleySprout" count="1" prob="0.5"/>
+		<property name="DowngradeBlock" value="plantedBarleySprout"/>
 		<property name="SortOrder1" value="B972"/>
 		<property name="SortOrder2" value="0003"/>
 	</block>
 	
-	<block name="Wheat Sprout">
+	<block name="plantedWheatSprout">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 		<property name="CustomIcon" value="treeGreenBrownGrassDiagonal"/>
 		<property name="CreativeMode" value="Player"/>
@@ -356,23 +386,23 @@
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkGreenSmallPrefab"/>
 		<property name="PlaceAsRandomRotation" value="true"/>
 		<property name="MultiBlockDim" value="1,3,1"/>
-		<property name="PlantGrowing.Next" value="Wheat Growing"/>
+		<property name="PlantGrowing.Next" value="plantedWheatGrowing"/>
 		<property name="Group" value="Food/Cooking"/>
-		<drop event="Destroy" name="Wheat Sprout" count="1"/>
+		<drop event="Destroy" name="plantedWheatSprout" count="1"/>
 		<property name="SortOrder1" value="B973"/>
 		<property name="SortOrder2" value="0000"/>
 		<property name="Group" value="Food/Cooking"/>
 	</block>
 
-	<block name="Wheat Growing">
+	<block name="plantedWheatGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="treeGreenBrownGrassDiagonal"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkGreenMediumPrefab"/>
 		<property name="MultiBlockDim" value="1,3,1"/>
-		<property name="PlantGrowing.Next" value="Wheat Plant"/>
-		<drop event="Destroy" name="Wheat Sprout" count="1"/>
+		<property name="PlantGrowing.Next" value="plantedWheatPlant"/>
+		<drop event="Destroy" name="plantedWheatSprout" count="1"/>
 		<property name="SortOrder1" value="B973"/>
 		<property name="SortOrder2" value="0001"/>
 	</block>
@@ -388,28 +418,33 @@
 		<property name="SortOrder2" value="0002"/>
 	</block>
 
-	<block name="Wheat Plant">
+	<block name="plantedWheatPlant">
 		<property name="Extends" value="plantedWheat3Harvest"/>
-		<property name="DescriptionKey" value="Wheat Plant"/>
+		<property name="DescriptionKey" value="plantedWheatPlant"/>
 		<property name="CustomIcon" value="treeGreenBrownGrassDiagonal"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkBrownPrefab"/>
 		<property name="MultiBlockDim" value="1,3,1"/>
-		<drop event="Harvest" name="Wheat" count="1" tag="cropHarvest"/>
-		<property name="DowngradeBlock" value="Wheat Sprout"/>
+		<drop event="Harvest" name="foodCropWheat" count="1" tag="cropHarvest"/>
+		<drop event="Harvest" name="foodCropWheat" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Harvest" name="foodCropWheat" count="1" tag="farmerBonusHarvest"/>
+		<drop event="Harvest" name="plantedWheatSprout" count="1" tag="farmerBonusSeed"/>
+		<drop event="Destroy" name="plantedWheatSprout" count="1" prob="0.5"/>
+		<property name="DowngradeBlock" value="plantedWheatSprout"/>
 		<property name="SortOrder1" value="B973"/>
 		<property name="SortOrder2" value="0003"/>
 	</block>
 	
-	<block name="Brewing Station">
+	<block name="brewingStation">
 	<property name="Class" value="Campfire"/>
 	<property name="CustomIcon" value="chemistryStation"/>
 	<property name="Material" value="Miron_scrap"/>
 	<property name="MaxDamage" value="800"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Path" value="solid"/>
-	<property name="Model" value="Entities/Crafting/chemistry_stationPrefab"/>
+	<!-- <property name="Model" value="Entities/Crafting/chemistry_stationPrefab"/> -->
+	<property name="Model" value="Entities/Crafting/chemStationPrefab"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DisplayType" value="blockMulti" />
 	<property name="MultiBlockDim" value="3,2,1"/>
@@ -426,9 +461,9 @@
 	<property class="Workstation">
 		<property name="Modules" value="output,fuel,input"/>
 	</property>
-	<property name="WorkstationIcon" value="ui_game_symbol_chemistry" />
+	<property name="WorkstationIcon" value="ui_game_symbol_beer" />
 	<property name="CraftActionName" value="lblContextActionMix" />
-	<property name="CraftIcon" value="ui_game_symbol_chemistry" />
+	<property name="CraftIcon" value="ui_game_symbol_beer" />
 	<property name="OpenSound" value="chem_station_open" />
 	<property name="CloseSound" value="chem_station_close" />
 	<property name="CraftSound" value="chem_station_mix_click" />
@@ -457,59 +492,59 @@
 	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
 </block>
 
-<block name="Distiller">
-	<property name="Class" value="Campfire"/>
-	<property name="CustomIcon" value="wineBarrel"/>
-	<property name="Material" value="Miron_scrap"/>
-	<property name="MaxDamage" value="800"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Path" value="solid"/>
-	<property name="Model" value="Entities/Decor/wineBarrelPrefab"/>
-	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-	<property name="DisplayType" value="blockMulti" />
-	<property name="MultiBlockDim" value="1,2,1"/>
-	<property name="Place" value="TowardsPlacerInverted"/>
-	<property name="OnlySimpleRotations" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Stacknumber" value="1"/>
-	<property name="HeatMapStrength" value="1.5"/>
-	<property name="HeatMapTime" value="1200"/>
-	<property name="HeatMapFrequency" value="25"/>
-	<property name="ActiveRadiusEffects" value="+heatSource(3)"/>
+	<block name="Distiller">
+		<property name="Class" value="Campfire"/>
+		<property name="CustomIcon" value="wineBarrel"/>
+		<property name="Material" value="Miron_scrap"/>
+		<property name="MaxDamage" value="800"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Entities/Decor/wineBarrelPrefab"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="DisplayType" value="blockMulti" />
+		<property name="MultiBlockDim" value="1,2,1"/>
+		<property name="Place" value="TowardsPlacerInverted"/>
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="ImposterDontBlock" value="true"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="HeatMapStrength" value="1.5"/>
+		<property name="HeatMapTime" value="1200"/>
+		<property name="HeatMapFrequency" value="25"/>
+		<property name="ActiveRadiusEffects" value="+heatSource(3)"/>
 
-	<property class="Workstation">
-		<property name="Modules" value="output,fuel,input"/>
-	</property>
-	<property name="WorkstationIcon" value="ui_game_symbol_chemistry" />
-	<property name="CraftActionName" value="lblContextActionMix" />
-	<property name="CraftIcon" value="ui_game_symbol_chemistry" />
-	<property name="OpenSound" value="chem_station_open" />
-	<property name="CloseSound" value="chem_station_close" />
-	<property name="CraftSound" value="chem_station_mix_click" />
-	<property name="CraftCompleteSound" value="chem_station_complete_item" />
-	<property name="WorkstationJournalTip" value="chemistryStationTip" />
+		<property class="Workstation">
+			<property name="Modules" value="output,fuel,input"/>
+		</property>
+		<property name="WorkstationIcon" value="ui_game_symbol_thirst" />
+		<property name="CraftActionName" value="lblContextActionMix" />
+		<property name="CraftIcon" value="ui_game_symbol_thirst" />
+		<property name="OpenSound" value="chem_station_open" />
+		<property name="CloseSound" value="chem_station_close" />
+		<property name="CraftSound" value="chem_station_mix_click" />
+		<property name="CraftCompleteSound" value="chem_station_complete_item" />
+		<property name="WorkstationJournalTip" value="chemistryStationTip" />
 
-	<property class="RepairItems">
-		<property name="resourceScrapBrass" value="50"/>
-		<property name="resourceWood" value="50"/>
-	</property>
-	<drop event="Harvest" name="resourceScrapBrass" count="100" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceWood" count="50" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceWood" count="15" tag="salvageHarvest"/>
-	<drop event="Destroy" count="0"/>
-	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-	<property name="TakeDelay" value="15"/>
-	<property name="Group" value="Food/Cooking,Building,Science"/>
-	<property name="EconomicValue" value="4000"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="SellableToTrader" value="false"/>
-	<property name="SortOrder1" value="B281"/>
-	<property name="SortOrder2" value="0800"/>
-	<property name="Group" value="Building,TCScience,advBuilding"/>
-	<property name="Tags" value="workstationSkill,twitch_workstation"/>
-	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
-</block>
+		<property class="RepairItems">
+			<property name="resourceScrapBrass" value="50"/>
+			<property name="resourceWood" value="50"/>
+		</property>
+		<drop event="Harvest" name="resourceScrapBrass" count="100" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceWood" count="50" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceWood" count="15" tag="salvageHarvest"/>
+		<drop event="Destroy" count="0"/>
+		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+		<property name="TakeDelay" value="15"/>
+		<property name="Group" value="Food/Cooking,Building,Science"/>
+		<property name="EconomicValue" value="4000"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="SortOrder1" value="B281"/>
+		<property name="SortOrder2" value="0800"/>
+		<property name="Group" value="Building,TCScience,advBuilding"/>
+		<property name="Tags" value="workstationSkill,twitch_workstation"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	</block>
 	
 </insertBefore>
 

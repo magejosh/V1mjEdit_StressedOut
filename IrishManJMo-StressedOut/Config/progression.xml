@@ -1,53 +1,94 @@
 <StressedOut>
-<remove xpath="/progression/perks/perk[@name='perkMasterChef']"/>
+
+	<!-- mjEdit - since perkMasterChef doesn't unlock those food recipes from a21 onwards, keeping the pre-alpha21 method there breaks the game balance of the Learn By Looting system. As such, food items Crafting has been moved to craftingFood which is what the Crafting magazines for food give you. To compensate I added loot probs for food and medical crafting skill magazines to perkBrewmaster so taking levels in it will help you unlock the new food recipes faster. Also adjusted tags on items to help loot them via the LootProb for food and medical depending on which they are. 
+		I did the best I could to stick to your intended progression for their unlock tiers. -->
+
+
+    <!-- T1 Food -->
+    <!-- Display -->
+    <csv xpath="//crafting_skill[@name='craftingFood']/display_entry/unlock_entry[starts-with(@item,'foodGrilledMeat')]/@item" op="Add">foodPorkChops</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']/display_entry/unlock_entry[starts-with(@item,'foodBoiledMeat')]/@item" op="Add">foodBlueberryMuffins</csv>
+
+    <!-- Unlock -->
+    <csv xpath="//crafting_skill[@name='craftingFood']/effect_group/passive_effect[starts-with(@tags,'foodGrilledMeat')]/@tags" op="Add">foodPorkChops</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']/effect_group/passive_effect[starts-with(@tags,'foodBoiledMeat')]/@tags" op="Add">foodBlueberryMuffins</csv>
+
+
+    <!-- T2 Food -->
+    <!-- Display -->
+    <csv xpath="//crafting_skill[@name='craftingFood']/display_entry/unlock_entry[starts-with(@item,'foodPumpkinCheesecake')]/@item" op="Add">foodHoneyHam</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']/display_entry/unlock_entry[starts-with(@item,'foodSteakAndPotato')]/@item" op="Add">foodSmokedGame</csv>
+
+    <!-- Unlock -->
+    <csv xpath="//crafting_skill[@name='craftingFood']/effect_group/passive_effect[starts-with(@tags,'foodPumpkinCheesecake')]/@tags" op="Add">foodHoneyHam</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']/effect_group/passive_effect[starts-with(@tags,'foodSteakAndPotato')]/@tags" op="Add">foodSmokedGame</csv>
+
+
+    <!-- T3 Food -->
+    <!-- Display -->
+    <csv xpath="//crafting_skill[@name='craftingFood']/display_entry/unlock_entry[starts-with(@item,'foodFishTacos')]/@item" op="Add">foodSushi</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']/display_entry/unlock_entry[starts-with(@item,'foodChiliDog')]/@item" op="Add">foodChickenNoodles</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']/display_entry/unlock_entry[starts-with(@item,'foodShamChowder')]/@item" op="Add">foodRabbitStew</csv>
+
+    <!-- Unlock -->
+    <csv xpath="//crafting_skill[@name='craftingFood']/effect_group/passive_effect[starts-with(@tags,'foodFishTacos')]/@tags" op="Add">foodSushi</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']/effect_group/passive_effect[starts-with(@tags,'foodChiliDog')]/@tags" op="Add">foodChickenNoodles</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']/effect_group/passive_effect[starts-with(@tags,'foodShamChowder')]/@tags" op="Add">foodRabbitStew</csv>
+
+
+    <!-- T4 Food -->
+    <!-- Display -->
+    <csv xpath="//crafting_skill[@name='craftingFood']/display_entry/unlock_entry[starts-with(@item,'foodSpaghetti')]/@item" op="Add">foodBobcatBurgers</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']/display_entry/unlock_entry[starts-with(@item,'foodGumboStew')]/@item" op="Add">foodBearChili</csv>
+
+    <!-- Unlock -->
+    <csv xpath="//crafting_skill[@name='craftingFood']/effect_group/passive_effect[starts-with(@tags,'foodSpaghetti')]/@tags" op="Add">foodBobcatBurgers</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']/effect_group/passive_effect[starts-with(@tags,'foodGumboStew')]/@tags" op="Add">foodBearChili</csv>
+
+
+
 <append xpath="/progression/perks">
 
-<perk name="perkBrewmaster" max_level="4" parent="skillIntellectCraftsmanship" name_key="Brewmaster" desc_key="Brew high quality beverages" icon="ui_game_symbol_beer">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqIntellectLevel01"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
-		
-		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkBrewmasterCrafting"/><!-- fake crafting perk that is used to scale resources -->
+	<perk name="perkBrewmaster" max_level="4" parent="skillIntellectCraftsmanship" name_key="Brewmaster" desc_key="perkBrewmasterDesc" icon="ui_game_symbol_beer">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqIntellectLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+			
+			<effect_group>
+				<passive_effect name="CraftingTier" operation="base_set" level="0,4" value="0,5" tags="perkBrewmaster"/><!-- connected to recipes now, and added craft time one too, mjEdit -->
+				<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-.1,-.5" tags="perkBrewmaster" />
 
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="Wheat Sprout,Agave Sprout,Barley Sprout,Sugar Cane Sprout, Tobacco Sprout, Indica Sprout, Sativa Sprout, Cocoa Sprout"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="Stout,Lager,Pale Ale,Pilsner,IPA,Wheat Ale,Pumpkin Ale,Porter,Brewing Station"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="Whiskey,Vodka,Tequila,Gin,Rum,Brandy,Sake,Distiller"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="Gold Rush,Irish Coffee,BlackJack,Gin and Juice,New Vegas Bomb,Day Walker,Zombie,Double Tap Margarita,Blueberry Long Island Iced Tea"/>
-
-			<effect_description level="1" desc_key="perkBrewmaster1Desc" long_desc_key="You may now craft the seeds for brewing ingredients"/>
-			<effect_description level="2" desc_key="perkBrewmaster2Desc" long_desc_key="You have now delved into the science of brewing craft beers and can also now craft Brewing Stations"/>
-			<effect_description level="3" desc_key="perkBrewmaster3Desc" long_desc_key="You may now craft Distillers to distill you own liquors to really take the edge off"/>
-			<effect_description level="4" desc_key="perkBrewmaster4Desc" long_desc_key="You have become a master mixologist and can whip up some creative cocktails"/>
-		</effect_group>
-	</perk>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,4" value="1" tags="plantedWheatSprout,plantedAgaveSprout,plantedBarleySprout,plantedSugarCaneSprout,plantedTobaccoSprout,plantedIndicaSprout,plantedSativaSprout,plantedCocoaSprout"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,4" value="1" tags="drinkJarStout,drinkJarLager,drinkJarPaleAle,drinkJarPilsner,drinkJarIPA,drinkJarWheatAle,drinkJarPumpkinAle,drinkJarPorter,brewingStation"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="drinkJarWhiskey,drinkJarVodka,drinkJarTequila,drinkJarGin,drinkJarRum,drinkJarBrandy,drinkJarSake,Distiller"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4" value="1" tags="drinkJarGoldRush,drinkJarIrishCoffee,drinkJarBlackJack,drinkJarGinandJuice,drinkJarNewVegasBomb,drinkJarDayWalker,drinkJarZombie,drinkJarDoubleTapMargarita,drinkJarBlueberryLongIslandIcedTea"/>
+				
+				<!-- Increase the chance to find food items with each perk rank -->
+				<passive_effect name="LootProb" operation="perc_add" level="1,4" value="2,10" tags="foodSkill"/>
+				<!-- Increase the chance to find food crafting skill magazines with each perk rank up to crafting skill 100 -->
+				<passive_effect name="LootProb" operation="perc_add" level="1,4" value="2,10" tags="foodCSM">
+					<requirement name="ProgressionLevel" progression_name="craftingFood" operation="LT" value="100"/>
+				</passive_effect>
+				<passive_effect name="LootProb" operation="perc_add" level="1,4" value="2,10" tags="medicalCSM">
+					<requirement name="ProgressionLevel" progression_name="craftingMedical" operation="LT" value="75"/>
+				</passive_effect>
+				<!-- Once food crafting skill reaches 100, set the probability bonus of finding food crafting skill magazines to 0 -->
+				<passive_effect name="LootProb" operation="base_set" level="1,4" value="1,1" tags="foodCSM">
+					<requirement name="ProgressionLevel" progression_name="craftingFood" operation="Equals" value="100"/>
+				</passive_effect>
+				<passive_effect name="LootProb" operation="base_set" level="1,4" value="1,1" tags="medicalCSM">
+					<requirement name="ProgressionLevel" progression_name="craftingMedical" operation="Equals" value="75"/>
+				</passive_effect>
+				
+				<effect_description level="1" desc_key="perkBrewmaster1Desc" long_desc_key="perkBrewmaster1LongDesc"/>
+				<effect_description level="2" desc_key="perkBrewmaster2Desc" long_desc_key="perkBrewmaster2LongDesc"/>
+				<effect_description level="3" desc_key="perkBrewmaster3Desc" long_desc_key="perkBrewmaster3LongDesc"/>
+				<effect_description level="4" desc_key="perkBrewmaster4Desc" long_desc_key="perkBrewmaster4LongDesc"/>
+			</effect_group>
+		</perk>
 	
-	<perk name="perkMasterChef" parent="skillStrengthGeneral" name_key="perkMasterChefName" desc_key="perkMasterChefDesc" icon="ui_game_symbol_spatula">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01" /></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03" /></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05" /></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07" /></level_requirements>
-		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10" /></level_requirements>
-
-		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkMasterChef" /><!-- fake crafting perk that is used to scale resources -->
-			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-.1,-.5" tags="perkMasterChef" />
-
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="Pork Chops,Blueberry Muffins,Smoked Game,foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea" />
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="Honey Ham,foodSteakAndPotato,foodBlueberryPie,foodMeatStew,foodVegetableStew,foodPumpkinPie,foodPumpkinCheesecake,foodPumpkinBread" />
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="Sushi,foodShamChowder,foodHoboStew,foodFishTacos,drinkYuccaJuiceSmoothie,foodChiliDog,drinkJarBeer" />
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="Chicken Noodles,Rabbit Stew,foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast" />
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="Bobcat Burgers,Bear Chili,drinkJarGrandpasMoonshine,drinkJarGrandpasAwesomeSauce,drinkJarGrandpasLearningElixir" />
-
-			<effect_description level="1" desc_key="perkMasterChefRank1Desc" long_desc_key="perkMasterChefRank1LongDesc" />
-			<effect_description level="2" desc_key="perkMasterChefRank2Desc" long_desc_key="perkMasterChefRank2LongDesc" />
-			<effect_description level="3" desc_key="perkMasterChefRank3Desc" long_desc_key="perkMasterChefRank3LongDesc" />
-			<effect_description level="4" desc_key="perkMasterChefRank4Desc" long_desc_key="perkMasterChefRank4LongDesc" />
-			<effect_description level="5" desc_key="perkMasterChefRank5Desc" long_desc_key="perkMasterChefRank5LongDesc" />
-		</effect_group>
-	</perk>
-
-
 </append>
+
+
 </StressedOut>

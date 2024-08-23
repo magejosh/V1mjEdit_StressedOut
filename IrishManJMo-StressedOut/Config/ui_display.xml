@@ -120,7 +120,7 @@
 			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
 		</item_display_info>
 		
-		<item_display_info display_type="Gold Rush" display_group="groupConsumables">
+		<item_display_info display_type="GoldRush" display_group="groupConsumables">
 			<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>
 			<display_entry name="dStopsWeakness" title_key="statStopsWeakness" display_type="Percent"/>
 			<display_entry name="dStopsConcussion" title_key="statStopsConcussion" display_type="Percent"/>
@@ -129,7 +129,7 @@
 			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
 		</item_display_info>
 		
-		<item_display_info display_type="Irish Coffee" display_group="groupConsumables">
+		<item_display_info display_type="IrishCoffee" display_group="groupConsumables">
 			<display_entry name="dHarvestMining" title_key="statHarvestMining" display_type="Percent" display_leading_plus="true"/>
 			<display_entry name="dHypothermalResist" title_key="statHypothermalResist"/>
 			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>

@@ -4,12 +4,47 @@
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="zombieAlertAOE2"/>
 		</append>
 		
-		<set xpath="/entity_classes/entity_class[@name='animalBear']/drop[@event='Harvest' and @name='foodRawMeat']/@name">Raw Game Meat</set>
-		<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[@event='Harvest' and @name='foodRawMeat']/@name">Raw Game Meat</set>
-		<set xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@event='Harvest' and @name='foodRawMeat']/@name">Raw Game Meat</set>
-		<set xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@event='Harvest' and @name='foodRawMeat']/@name">Raw Rabbit Meat</set>
-		<set xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@event='Harvest' and @name='foodRawMeat']/@name">Raw Chicken</set>
-		<set xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@event='Harvest' and @name='foodRawMeat']/@name">Raw Pork</set>
-		<set xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@event='Harvest' and @name='foodRawMeat']/@name">Raw Pork</set>
-		
+		<set xpath="/entity_classes/entity_class[@name='animalStag']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawGameMeat</set>
+		<set xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawGameMeat</set>
+		<set xpath="/entity_classes/entity_class[@name='animalBear']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawGameMeat</set>
+		<set xpath="/entity_classes/entity_class[@name='animalBearSmall']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawGameMeat</set>
+		<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawGameMeat</set>
+		<set xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawGameMeat</set>
+		<set xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawGameMeat</set>
+		<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawGameMeat</set>
+		<set xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawGameMeat</set>
+		<set xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawGameMeat</set>
+		<set xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawRabbitMeat</set>
+		<set xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawChicken</set>
+		<set xpath="/entity_classes/entity_class[@name='animalChickenHostile']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawChicken</set>
+		<set xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawPork</set>
+		<!-- <set xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@event='Harvest' and @name='foodRawMeat']/@name">foodRawPork</set> -->
+
+<!-- <append xpath="/entity_classes">
+
+<entity_class name="animalPig" extends="animalTemplateTimid">
+<property name="Class" value="EntityAnimalStag"/>
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,animal"/>
+	<property name="Mesh" value="Animals/Pig/PIG"/>
+	<property name="Prefab" value="NPC"/>
+	<property name="Parent" value="Animals"/>
+	<property name="SoundHurt" value="pigpain"/>
+	<property name="SoundDeath" value="pigdeath"/>
+	<property name="MoveSpeedPanic" value="1.2"/>
+	<property name="PhysicsBody" value="pig"/>
+	<property name="ExperienceGain" value="130"/>
+	<property name="SwimOffset" value="0.7"/>
+	<property name="Faction" value="animals"/>
+	<property name="HasRagdoll" value="true"/>
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
+	<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="7"/>
+	<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="6"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+</entity_class>
+
+</append> -->
+
 </StressedOut>

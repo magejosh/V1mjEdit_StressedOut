@@ -1,5 +1,272 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english
-perkBrewmaster1Desc,progression,perk Int,,,Grain Farmer,
-perkBrewmaster2Desc,progression,perk Int,,,Microbrewing,
-perkBrewmaster3Desc,progression,perk Int,,,Distiller,
-perkBrewmaster4Desc,progression,perk Int,,,Mixologist,
+Key,english
+
+Stoned01,Stoned
+Stoned01Desc,"The weight of the world has been lifted off of your shoulders for a moment"
+Stoned01Tip,"You feel very relaxed but a bit too relaxed"
+Stoned02Desc,"Inspiration is flowing through you"
+Stoned02Tip,"You feel a bit relaxed but very focused"
+
+Hungover,Hungover
+HungoverDesc,"Your drinking binge has led to horrible consequences"
+HungoverTip,"You are now hungover"
+
+Paranoid,Paranoid
+ParanoidDesc,"Your seeing and hearing things that aren't really there"
+ParanoidTip,"You are now paranoid from your stress"
+
+BoozeStaminaBonus,Max Stamina Boost
+BoozeStaminaBonusDesc,"For a limited time you have a boost of adrenaline"
+
+buffStoutDesc,"You're pretty sure this stout beer just put hairs on your chest"
+buffStoutTip,"What a manly beer this is"
+
+buffPilsnerDesc,"This standard pilsner beer has energized you for the moment"
+buffPilsnerTip,"This isn't the best beer but it isn't the worst either"
+
+buffPorterDesc,"This porter is very soothing and you feel warm"
+buffPorterTip,"Porters hit quite right in the dead of winter"
+
+buffPaleAle,Pale Ale
+buffPaleAleDesc,"This pale ale gives you the strength to fight"
+buffPaleAleTip,"This pale ale has a nice robust flavor"
+
+buffLagerDesc,"This charismatic drink is a household staple"
+buffLagerTip,"Your charisma shines after slamming this lager"
+
+buffIPADesc,"This IPA refreshes you in this heat"
+buffIPATip,"IPAs are so refreshing on the taste buds"
+
+buffPumpkinAle,Pumpkin Ale
+buffPumpkinAleDesc,"Your immune system feels quite the boost"
+buffPumpkinAleTip,"This is one well crafted pumpkin ale"
+
+buffWheatAle,Wheat Ale
+buffWheatAleDesc,"What a great aroma and taste of this fine beer"
+buffWheatAleTip,"You get the best of both worlds with this beer"
+
+buffWhiskeyDesc,"Relieved but at what cost"
+buffWhiskeyTip,"I hope this was worth it"
+
+buffVodkaDesc,"Relieved but at what cost"
+buffVodkaTip,"I hope this was worth it"
+
+buffRumDesc,"Relieved but at what cost"
+buffRumTip,"I hope this was worth it"
+
+buffTequilaDesc,"Relieved but at what cost"
+buffTequilaTip,"I hope this was worth it"
+
+buffGinDesc,"Relieved but at what cost"
+buffGinTip,"I hope this was worth it"
+
+buffSakeDesc,"Relieved but at what cost"
+buffSakeTip,"I hope this was worth it"
+
+buffBrandyDesc,"Relieved but at what cost"
+buffBrandyTip,"I hope this was worth it"
+
+buffCocktailDesc,"Nothing eases stress like a delicious cocktail"
+buffCocktailTip,"You drink a well crafted cocktail"
+
+buffGinJuice,"Gin & Juice"
+buffNewVegas,"New Vegas Bomb"
+buffDayWalker,"Day Walker"
+buffZombie,"Zombie"
+buffDoubleTap,"Double Tap"
+buffLongIsland,"Long Island"
+
+perkBrewmasterDesc,"Brew high quality beverages to aid in stress relief with this skill.\nEach level will increase your odds of looting Medical and Food crafting magazines as well as ingredients to help you craft advanced brews."
+
+perkBrewmaster1Desc,"Grain Farmer"
+perkBrewmaster2Desc,"Microbrewing"
+perkBrewmaster3Desc,"Distiller"
+perkBrewmaster4Desc,"Mixologist"
+
+perkBrewmaster1LongDesc,"You may now craft the seeds for brewing ingredients"
+perkBrewmaster2LongDesc,"You have now delved into the science of brewing craft beers and can also now craft Brewing Stations"
+perkBrewmaster3LongDesc,"You may now craft Distillers to distill your own liquors to really take the edge off"
+perkBrewmaster4LongDesc,"You have become a master mixologist and can whip up some creative cocktails"
+
+brewingStation,"Craft Brewing Station"
+brewingStationDesc,"The Brewing Station is used to craft stress relieving drinks. Have a drink, take a load off."
+
+Distiller,"Spirits Distiller"
+DistillerDesc,"The Distiller workstation is used for brewing spirits to raise your spirits and reduce your stress."
+
+bookANiceRelaxingBook,"A Nice Relaxing Book"
+bookANiceRelaxingBookDesc,"A Nice Relaxing Book that can be read to relieve stress."
+
+foodRawGameMeat,Raw Game Meat
+foodRawGameMeatDesc,"Raw Game Meat can be eaten raw but is better charred, grilled, boiled or made into stews at a campfire."
+foodRawRabbitMeat,Raw Rabbit Meat
+foodRawRabbitMeatDesc,"Raw Rabbit Meat can be eaten raw but is better charred, grilled, boiled or made into stews at a campfire."
+foodRawChicken,Raw Chicken
+foodRawChickenDesc,"Raw Chicken Meat can be eaten raw but is better charred, grilled, boiled or made into stews at a campfire."
+foodRawPork,Raw Pork
+foodRawPorkDesc,"Raw Pork Meat can be eaten raw but is better charred, grilled, boiled or made into stews at a campfire."
+foodRawFish,Raw Fish
+foodRawFishDesc,"Raw Fish Meat can be eaten raw but is better charred, grilled, boiled or made into stews at a campfire."
+
+foodCropRice,Rice
+foodCropRiceDesc,"A staple grain that can be used in various dishes, providing a basic but essential food source."
+foodCropYeast,Yeast
+foodCropYeastDesc,"The magical ingredient that transforms dough into bread and grain into beer."
+foodCropFlour,Flour
+foodCropFlourDesc,"Finely milled grain, ready to be turned into bread, pastries, and more."
+
+foodCropAgave,Agave
+foodCropAgaveDesc,"A versatile plant, key to producing both sweet syrup and strong spirits."
+plantedAgaveSprout,Agave Sprout
+plantedAgaveSproutDesc,"A young agave sprout, slowly growing under the sun's watchful eye."
+plantedAgaveGrowing,Agave Growing
+plantedAgavePlant,Agave Plant
+plantedAgaveGrowingDesc,"The agave plant is gaining strength, its sharp leaves stretching outwards."
+plantedAgavePlantDesc,"A fully grown agave plant, ready for harvest."
+
+foodCropCocoa,Cocoa
+foodCropCocoaDesc,"The seeds of the cacao tree, ready to be processed into delicious chocolate."
+plantedCocoaSprout,Cocoa Sprout
+plantedCocoaSproutDesc,"A tender cocoa sprout, just beginning its journey towards becoming a mighty tree."
+plantedCocoaGrowing,Cocoa Growing
+plantedCocoaPlant,Cocoa Plant
+plantedCocoaGrowingDesc,"This cocoa plant is steadily growing, with its future harvests promising rich chocolate."
+plantedCocoaPlantDesc,"A mature cocoa plant, laden with pods ready for picking."
+
+foodCropBarley,Barley
+foodCropBarleyDesc,"A hardy grain used in brewing and baking, adding strength and flavor."
+plantedBarleySprout,Barley Sprout
+plantedBarleySproutDesc,"A sprouting barley plant, beginning its cycle towards becoming a vital crop."
+plantedBarleyGrowing,Barley Growing
+plantedBarleyPlant,Barley Plant
+plantedBarleyGrowingDesc,"This barley plant is thriving, its stalks swaying in the breeze."
+plantedBarleyPlantDesc,"A fully grown barley plant, ready for harvest and brewing."
+
+foodCropWheat,Wheat
+foodCropWheatDesc,"A common grain, fundamental to bread and numerous other staple foods."
+plantedWheatSprout,Wheat Sprout
+plantedWheatSproutDesc,"A small sprout of wheat, reaching for the sky."
+plantedWheatGrowing,Wheat Growing
+plantedWheatPlant,Wheat Plant
+plantedWheatGrowingDesc,"This wheat plant is maturing, its golden stalks a promise of a bountiful harvest."
+plantedWheatPlantDesc,"A ripe wheat plant, heavy with grains ready for gathering."
+
+foodCropTobacco,Tobacco
+foodCropTobaccoDesc,"Cultivated for its leaves, which are dried and used in cigars and cigarettes for stress relief."
+plantedTobaccoSprout,Tobacco Sprout
+plantedTobaccoSproutDesc,"A delicate tobacco sprout, beginning its life cycle."
+plantedTobaccoGrowing,Tobacco Growing
+plantedTobaccoPlant,Tobacco Plant
+drugCigarette,drugCigarette
+drugCigaretteDesc,"A rolled stick of tobacco, providing a quick but temporary stress relief."
+drugCigar,Cigar
+drugCigarDesc,"A thick, hand-rolled tobacco product, offering a more substantial and flavorful experience."
+plantedTobaccoGrowingDesc,"This tobacco plant is growing stronger, its leaves expanding and thickening."
+plantedTobaccoPlantDesc,"A fully developed tobacco plant, its leaves ready to be harvested."
+
+foodCropSativaBud,Sativa Bud
+foodCropSativaBudDesc,"A bud known for its energizing and uplifting effects, popular among those seeking creativity."
+plantedSativaSprout,Sativa Sprout
+plantedSativaSproutDesc,"A sativa sprout, just beginning its journey to becoming a potent plant."
+plantedSativaGrowing,Sativa Growing
+plantedSativaPlant,Sativa Plant
+drugSativaJoint,Sativa Joint
+drugSativaJointDesc,"A joint rolled with sativa buds, perfect for a creative spark or social gathering."
+plantedSativaGrowingDesc,"This sativa plant is growing taller, with buds forming and maturing."
+plantedSativaPlantDesc,"A full-grown sativa plant, its buds ready for harvest."
+
+foodCropIndicaBud,Indica Bud
+foodCropIndicaBudDesc,"A bud known for its calming and relaxing properties, often used for stress relief."
+plantedIndicaSprout,Indica Sprout
+plantedIndicaSproutDesc,"An indica sprout, small but promising a soothing future."
+plantedIndicaGrowing,Indica Growing
+plantedIndicaPlant,Indica Plant
+drugIndicaJoint,Indica Joint
+drugIndicaJointDesc,"A joint rolled with indica buds, ideal for unwinding after a long day."
+plantedIndicaGrowingDesc,"This indica plant is maturing, its dense buds slowly forming."
+plantedIndicaPlantDesc,"A mature indica plant, its buds ready to deliver deep relaxation."
+
+foodCropSugarCane,Sugar Cane
+foodCropSugarCaneDesc,"Tall, sweet stalks that can be processed into sugar or rum."
+plantedSugarCaneSprout,Sugar Cane Sprout
+plantedSugarCaneSproutDesc,"A tender sugar cane sprout, reaching upwards towards the sun."
+plantedSugarCaneGrowing,Sugar Cane Growing
+plantedSugarCaneGrowingDesc,"This sugar cane plant is growing quickly, its stalks becoming taller and thicker."
+plantedSugarCanePlant,Sugar Cane Plant
+plantedSugarCanePlantDesc,"A mature sugar cane plant, ready to be harvested for its sweet sap."
+
+drinkJarLager,Lager
+drinkJarLagerDesc,"A light, crisp beer that's a favorite for casual drinking."
+drinkJarPorter,Porter
+drinkJarPorterDesc,"A dark, rich beer with deep, roasted flavors."
+drinkJarPilsner,Pilsner
+drinkJarPilsnerDesc,"A refreshing, pale beer with a clean finish, perfect for warm days."
+drinkJarStout,Stout
+drinkJarStoutDesc,"A thick, hearty beer with strong flavors of coffee and chocolate."
+drinkJarIPA,IPA
+drinkJarIPADesc,"A hoppy, bitter beer with a strong flavor profile, loved by craft beer enthusiasts."
+drinkJarPaleAle,Pale Ale
+drinkJarPaleAleDesc,"A balanced beer with a pleasant malt and hop character."
+drinkJarWheatAle,Wheat Ale
+drinkJarWheatAleDesc,"A smooth, hazy beer with hints of fruit and spice, perfect for any occasion."
+drinkJarPumpkinAle,Pumpkin Ale
+drinkJarPumpkinAleDesc,"A seasonal beer with warm spices and a rich pumpkin flavor, great for autumn."
+
+drinkJarBlueberryJuice,Blueberry Juice
+drinkJarBlueberryJuiceDesc,"A refreshing juice bursting with the sweet and tangy flavor of ripe blueberries."
+
+drinkJarWhiskey,Whiskey
+drinkJarWhiskeyDesc,"A strong, smooth spirit with deep, warming notes of oak and caramel."
+drinkJarVodka,Vodka
+drinkJarVodkaDesc,"A clean, crisp spirit, perfect for mixing or sipping straight."
+drinkJarRum,Rum
+drinkJarRumDesc,"A rich and sweet spirit with notes of molasses and tropical fruits."
+drinkJarGin,Gin
+drinkJarGinDesc,"A botanical-infused spirit, offering a refreshing taste of juniper and herbs."
+drinkJarTequila,Tequila
+drinkJarTequilaDesc,"A bold, earthy spirit with a fiery kick, perfect for shots or cocktails."
+drinkJarSake,Sake
+drinkJarSakeDesc,"A delicate, smooth rice wine with subtle flavors and a refined finish."
+drinkJarBrandy,Brandy
+drinkJarBrandyDesc,"A luxurious, amber-hued spirit with notes of dried fruit and spices, perfect for sipping."
+
+drinkJarGoldRush,Gold Rush
+drinkJarGoldRushDesc,"A cocktail that combines the richness of bourbon with the sweetness of honey and a splash of citrus."
+drinkJarIrishCoffee,Irish Coffee
+drinkJarIrishCoffeeDesc,"A warming blend of hot coffee, smooth whiskey, and a touch of sugar, topped with cream."
+drinkJarGinandJuice,Gin and Juice
+drinkJarGinandJuiceDesc,"A laid-back mix of gin and fruit juice, ideal for unwinding."
+drinkJarNewVegasBomb,New Vegas Bomb
+drinkJarNewVegasBombDesc,"A high-octane cocktail that packs a punch, not for the faint of heart."
+drinkJarDayWalker,Day Walker
+drinkJarDayWalkerDesc,"A refreshing, blood-orange flavored drink that keeps you sharp, day or night."
+drinkJarZombie,Zombie
+drinkJarZombieDesc,"A potent tropical cocktail with a mix of rum and fruit juices, strong enough to bring the dead to life."
+drinkJarDoubleTapMargarita,Double Tap Margarita
+drinkJarDoubleTapMargaritaDesc,"A bold margarita with an extra shot of tequila, perfect for those who live life on the edge."
+drinkJarBlueberryLongIslandIcedTea,Blueberry Long Island Iced Tea
+drinkJarBlueberryLongIslandIcedTeaDesc,"A twist on the classic Long Island, infused with the sweet and tart flavor of blueberries."
+
+foodHoneyHam,Honey Ham
+foodHoneyHamDesc,"Honey Ham is a favorite of people everywhere, whether cooked fresh or from a can."
+foodPorkChops,Pork Chops
+foodPorkChopsDesc,"Pork Chops are sure to hit the spot whether it's lunch or dinner time!"
+foodSushi,Sushi
+foodSushiDesc,"A delicate and artfully prepared dish of vinegared rice, fresh seafood, and crisp vegetables."
+foodBlueberryMuffins,Blueberry Muffins
+foodBlueberryMuffinsDesc,"Blueberry Muffins are a great breakfast or brunch food that washes down well with coffee or Blueberry Juice."
+foodSmokedGame,Smoked Game
+foodSmokedGameDesc,"Savory and smoky, this game meat is full of rich, intense flavors."
+foodChickenNoodles,Chicken Noodles
+foodChickenNoodlesDesc,"A comforting dish of tender chicken and hearty noodles, perfect for any meal."
+foodRabbitStew,Rabbit Stew
+foodRabbitStewDesc,"A rustic stew featuring tender rabbit, slow-cooked with vegetables and herbs."
+foodBobcatBurgers,Bobcat Burgers
+foodBobcatBurgersDesc,"A wild twist on a classic burger, made with flavorful bobcat meat."
+foodBearChili,Bear Chili
+foodBearChiliDesc,"A hearty chili packed with the robust flavor of bear meat and spices."
+
+PolymerFishingNet,Polymer Fishing Net
+PolymerFishingNetDesc,"A strong and lightweight net, perfect for catching fish with ease."
+
+
+

@@ -1,81 +1,9 @@
 <StressedOut>
 
-<remove xpath="/buffs/buff[@name='buffStatusCheck01']"/>
+	<!-- mjEdit - removing buffStatusCheck01 and then appending it back in does work. But it's destructive and adds overhead on the developer of the mod to keep it up to date with the game anytime there are code changes relying on the way TFP setup that buff since it is the engine that runs all their player buffs at it's core. We can, since you don't need to alter any of that, just append your specific triggered_effect in it's own little effect_group on that buff so it still fires at the same rate and all as you always have, without the need to maintain the rest of the buff. This carries the additional MVC component style benefit of not conflicting with other mods which also likely target this important buff for their own effects/systems. If everyone removes and replaces it, then only the last to load wins and everyone else's mod breaks. -->
 
-<append xpath="/buffs">
-
-<buff name="buffStatusCheck01" hidden="true" remove_on_death="false">
-		<stack_type value="ignore"/>
-		<update_rate value="2"/>
-
-
-		<!--
-
-		<effect_group name="temp fix to cleanup later">
-			<requirement name="CVarCompare" cvar="$journalB53" operation="Equals" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddJournalEntry" journal="stealthTip"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$journalB53" operation="set" value="1"/>
-		</effect_group>
-
+<append xpath="/buffs/buff[@name='buffStatusCheck01']">		
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffA17b7patch">
-				<requirement name="CVarCompare" cvar="$A17b7patch" operation="LT" value="1"/>
-			</triggered_effect>
-		</effect_group>
-
-		<effect_group name="temp cleanup for the patch">
-			<requirement name="CVarCompare" cvar="$journalB147" operation="Equals" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddJournalEntry" journal="meleeWeaponStatsTip"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddJournalEntry" journal="rangedWeaponStatsTip"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddJournalEntry" journal="armorStatsTip"/>
-
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$journalB147" operation="set" value="1"/>
-		</effect_group>
-		-->
-		<effect_group>
-				<!--
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".DeadEyeKillCounter"/>
-				-->
-
-				<!--
-				<triggered_effect trigger="onSelfFirstSpawn" action="LogMessage" message="== Player respawn trigger"/>
-				<triggered_effect trigger="onSelfRespawn" action="LogMessage" message="== Player respawn trigger, after death"/>
-				<triggered_effect trigger="onSelfLeaveGame" action="LogMessage" message="== Player leave game trigger"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="LogMessage" message="== Player entered game trigger, re-logging into the world or first spawn in a new world"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="LogMessage" message="== Primary Start"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="LogMessage" message="== Primary End"/>
-				<triggered_effect trigger="onSelfSecondaryActionStart" action="LogMessage" message="== Secondary Start"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="LogMessage" message="== Secondary End"/>
-				<triggered_effect trigger="onReloadStart" action="LogMessage" message="== Reload Start"/>
-				<triggered_effect trigger="onReloadStop" action="LogMessage" message="== Reload Stop"/>
-
-				<triggered_effect trigger="onSelfEquipStart" action="LogMessage" message="== Equip Start"/>
-				<triggered_effect trigger="onSelfEquipStop" action="LogMessage" message="== Equip Stop"/>
-				<triggered_effect trigger="onSelfAimingGunStart" action="LogMessage" message="== Aiming Start"/>
-				<triggered_effect trigger="onSelfAimingGunStop" action="LogMessage" message="== Aiming Stop"/>
-
-				<triggered_effect trigger="onSelfHoldingItemCreated" action="LogMessage" message="== HoldingItemCreated"/>
-				<triggered_effect trigger="onSelfSecondaryActionStart" action="LogMessage" message="== onSelfSecondaryActionEnd"/>
-
-				<triggered_effect trigger="onSelfItemLooted" action="LogMessage" message="== onSelfItemLooted"/>
-				<triggered_effect trigger="onSelfItemLost" action="LogMessage" message="== onSelfItemLost"/>
-				<triggered_effect trigger="onSelfItemGained" action="LogMessage" message="== onSelfItemGained"/>
-
-				<triggered_effect trigger="onSelfRun" action="LogMessage" message="== onSelfRun"/>
-				<triggered_effect trigger="onSelfJump" action="LogMessage" message="== onSelfJump"/>
-				<triggered_effect trigger="onSelfLandJump" action="LogMessage" message="== onSelfLandJump"/>
-				<triggered_effect trigger="onSelfWalk" action="LogMessage" message="== onSelfWalk"/>
-				<triggered_effect trigger="onSelfCrouch" action="LogMessage" message="== onSelfCrouch"/>
-				<triggered_effect trigger="onSelfStand" action="LogMessage" message="== onSelfStand"/>
-				<triggered_effect trigger="onSelfCrouchRun" action="LogMessage" message="== onSelfCrouchRun"/>
-				<triggered_effect trigger="onSelfCrouchWalk" action="LogMessage" message="== onSelfCrouchWalk"/>
-				<triggered_effect trigger="onSelfSwimStart" action="LogMessage" message="== onSelfSwimStart"/>
-				<triggered_effect trigger="onSelfSwimStop" action="LogMessage" message="== onSelfSwimStop"/>
-				<triggered_effect trigger="onSelfSwimRun" action="LogMessage" message="== onSelfSwimRun"/>
-				<triggered_effect trigger="onSelfSwimIdle" action="LogMessage" message="== onSelfSwimIdle"/>
-				-->
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffJournalUnlocks"/>
-		
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="triggerStressed">
 					<requirement name="NotHasBuff" buff="triggerStressed"/>
 					<requirement name="NotHasBuff" buff="buffStressedCatch"/>
@@ -88,321 +16,15 @@
 					<requirement name="NotHasBuff" buff="buffStressed03GetBetter"/>
 					<requirement name="NotHasBuff" buff="buffStressed04"/>
 			</triggered_effect>
-
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="25200"/> <!-- in seconds -->
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$dysenteryMaxDuration" operation="set" value="3600"/> <!-- in seconds -->
-
-			<!-- <triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffStatusCheck01,buffStatusCheck02,buffPerkAbilityUpdate,buffNearDeathTraumaTrigger"/> -->
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusHungry01">
-				<requirement name="StatComparePercCurrentToMax" stat="Food" operation="LTE" value=".5"/>
-				<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
-				<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
-				<requirement name="NotHasBuff" buff="buffStatusHungry03"/>
-				<requirement name="NotHasBuff" buff="buffHealFood"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusHungry02">
-				<requirement name="StatComparePercCurrentToMax" stat="Food" operation="LTE" value=".25"/>
-				<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
-				<requirement name="NotHasBuff" buff="buffStatusHungry03"/>
-				<requirement name="NotHasBuff" buff="buffHealFood"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusHungry03">
-				<requirement name="StatComparePercCurrentToMax" stat="Food" operation="LTE" value=".02"/>
-				<requirement name="NotHasBuff" buff="buffStatusHungry03"/>
-				<requirement name="NotHasBuff" buff="buffHealFood"/>
-			</triggered_effect>
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusThirsty01">
-				<requirement name="StatComparePercCurrentToMax" stat="Water" operation="LTE" value="0.5"/>
-				<requirement name="NotHasBuff" buff="buffStatusThirsty01"/>
-				<requirement name="NotHasBuff" buff="buffStatusThirsty02"/>
-				<requirement name="NotHasBuff" buff="buffStatusThirsty03"/>
-				<requirement name="NotHasBuff" buff="buffHealWaterMax"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusThirsty02">
-				<requirement name="StatComparePercCurrentToMax" stat="Water" operation="LTE" value="0.25"/>
-				<requirement name="NotHasBuff" buff="buffStatusThirsty02"/>
-				<requirement name="NotHasBuff" buff="buffStatusThirsty03"/>
-				<requirement name="NotHasBuff" buff="buffHealWaterMax"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusThirsty03">
-				<requirement name="StatComparePercCurrentToMax" stat="Water" operation="LTE" value="0.02"/>
-				<requirement name="NotHasBuff" buff="buffStatusThirsty03"/>
-				<requirement name="NotHasBuff" buff="buffHealWaterMax"/>
-			</triggered_effect>
-
-			<!--
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusWounded">
-				<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LTE" value="0.5"/>
-			</triggered_effect>
-			-->
-
-			<!-- Being at low health increases the chance of getting hit by a critical effect -->
-			<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-				<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.9"/>
-			</passive_effect>
-			<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-				<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.8"/>
-			</passive_effect>
-			<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-				<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.7"/>
-			</passive_effect>
-			<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-				<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.6"/>
-			</passive_effect>
-			<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-				<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.5"/>
-			</passive_effect>
-			<passive_effect name="BuffResistance" operation="base_add" value="-.04" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire">
-				<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LT" value="0.4"/>
-			</passive_effect>
-
-			<!-- Remove particle effect if not on fire, this is a backup removal for remote clients -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-				<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-			</triggered_effect>
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_onFire" shape_mesh="true">
-				<requirement name="HasBuff" buff="buffIsOnFire"/>
-			</triggered_effect>
-
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="_sheltered"/>-->
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="_shaded"/>-->
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="_wetness"/>-->
-
-			<!-- One time weather survival buff for newbies -->
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNewbieCoat"/>
-
-			<!-- One time mining tip buff -->
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffMiningTip"/>
-			<!-- One time healing tip -->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$doingHealingWrong" operation="set" value="6"/>
-
-			<!-- Weather Survival HOT -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffElementHot">
-				<requirement name="NotHasBuff" buff="god"/>
-				<requirement name="NotHasBuff" buff="buffElementSweltering"/>
-				<requirement name="CVarCompare" cvar="_coretemp" operation="GT" value="10"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffElementHot">
-				<requirement name="CVarCompare" cvar="_coretemp" operation="LTE" value="10"/>
-			</triggered_effect>
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffElementSweltering">
-				<requirement name="NotHasBuff" buff="god"/>
-				<requirement name="ProgressionLevel" progression_name="perkWellInsulated" operation="LT" value="3"/>
-				<requirement name="CVarCompare" cvar="_coretemp" operation="GTE" value="30"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffElementSweltering">
-				<requirement name="CVarCompare" cvar="_coretemp" operation="LT" value="30"/>
-			</triggered_effect>
-
-			<!-- Weather Survival COLD -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffElementCold">
-				<requirement name="NotHasBuff" buff="god"/>
-				<requirement name="NotHasBuff" buff="buffElementFreezing"/>
-				<requirement name="CVarCompare" cvar="_coretemp" operation="LT" value="-10"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffElementCold">
-				<requirement name="CVarCompare" cvar="_coretemp" operation="GTE" value="-10"/>
-			</triggered_effect>
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffElementFreezing">
-				<requirement name="NotHasBuff" buff="god"/>
-				<requirement name="CVarCompare" cvar="_coretemp" operation="LTE" value="-30"/>
-				<requirement name="ProgressionLevel" progression_name="perkWellInsulated" operation="LT" value="3"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffElementFreezing">
-				<requirement name="CVarCompare" cvar="_coretemp" operation="GT" value="-30"/>
-			</triggered_effect>
-
-			<!-- Weather Survival WETNESS -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffElementWet">
-				<requirement name="CVarCompare" cvar="_wetness" operation="GT" value=".15"/>
-			</triggered_effect>
-
-			<!-- Biome radiation effects (simplified! We only use "3" for now) -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiation03">
-				<requirement name="NotHasBuff" buff="god"/>
-				<requirement name="CVarCompare" cvar="_biomeradiation" operation="GT" value="2.5"/>
-			</triggered_effect>
-			<!--
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="_biomeradiation"/>
-			-->
-
-			<!-- set max bleeding stacks that a player can apply -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="2">
-				<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="0"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="3">
-				<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="1"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="4">
-				<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="2"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="5">
-				<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="3"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="6">
-				<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="4"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="7">
-				<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="5"/></triggered_effect>
-
-			<!-- Encumbrance from inventory slots
-			This is not tied to the POSITION of the slot you use but the total number of slots used / unlocked. -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEncumberedInv">
-				<requirement name="CVarCompare" cvar="_encumberedslots" operation="GT" value="0"/>
-			</triggered_effect>
-
-			<!-- Reloading -->
-			<triggered_effect trigger="onReloadStart" action="AddBuff" buff="buffReloadMovementPenalty">
-				<requirement name="HoldingItemHasTags" tags="reloadPenalty"/>
-			</triggered_effect>
-
-			<!-- Aiming -->
-			<triggered_effect trigger="onSelfAimingGunStart" action="AddBuff" buff="buffHoldBreathAiming01">
-				<requirement name="HoldingItemHasTags" tags="holdBreathAiming"/>
-			</triggered_effect>
-
-			<!-- Drawing a bow -->
-			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffDrawBow01">
-				<requirement name="HoldingItemHasTags" tags="bowDrawPenalty"/>
-			</triggered_effect>
-
-			<!-- Counting burst length -->
-			<!--
-			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffBurstCounter">
-
-
-	onSelfPrimaryActionStart			works
-	onSelfPrimaryActionRayHit		works
-	onSelfPrimaryActionEnd
-	onSelfPrimaryActionUpdate		fires constantly
-	onSelfPrimaryActionAttackFinished  n/a?
-
-
-
-			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddBuff" buff="buffBurstCounter">
-				<requirement name="HoldingItemHasTags" tags="perkAutoWeaponsDamage"/>
-			</triggered_effect>
-			-->
-
-
-
-			<!-- Initialise perk abilities; buff only works onStack so fire it 2x -->
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<!-- Update cvar driven perks on buying perk levels -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-
-			<!-- Drowning -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffDrowning01">
-				<requirement name="CVarCompare" cvar="_underwater" operation="Equals" value="1"/>
-				<requirement name="NotHasBuff" buff="buffDrowning01"/>
-				<requirement name="NotHasBuff" buff="buffDrowning02"/>
-				<requirement name="NotHasBuff" buff="buffDrowning03"/>
-			</triggered_effect>
-
-			<!-- Falling -->
-			<triggered_effect trigger="onSelfFallImpact" action="AddBuff" buff="buffPlayerFallingDamage">
-				<requirement name="CVarCompare" cvar="_fallSpeed" operation="GTE" value=".08"/> <!-- a bit over 1.5m while walking -->
-			</triggered_effect>
-
-			<!-- Crouching -->
-			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffCrouching"/>
-
-			<!-- Tracking leveling / level up -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffLevelUpTracking">
-				<requirement name="PlayerLevel" operation="GT" value="@$LastPlayerLevel"/>
-			</triggered_effect>
-
-			<!-- Player HP / stamina per level -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$PlayerLevelBonus" operation="set" value="@$LastPlayerLevel"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$PlayerLevelBonus" operation="add" value="-1">
-				<requirement name="PlayerLevel" operation="LT" value="2"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$PlayerLevelBonus" operation="set" value="100">
-				<requirement name="PlayerLevel" operation="GT" value="100"/>
-			</triggered_effect>
-
-			<passive_effect name="HealthMax" operation="base_add" value="@$PlayerLevelBonus"/>
-			<passive_effect name="StaminaMax" operation="base_add" value="@$PlayerLevelBonus"/>
-			<passive_effect name="WaterMax" operation="base_add" value="@$PlayerLevelBonus"/>
-			<passive_effect name="FoodMax" operation="base_add" value="@$PlayerLevelBonus"/>
 		</effect_group>
+</append>
 
-		<!--
-		<effect_group name="Power Attack Grunt">
-			<triggered_effect trigger="onSelfSecondaryActionStart" action="LogMessage" message=" SECONDARY attack, looking at ENTITY">
-				<requirement name="IsLookingAtEntity"/>
-			</triggered_effect>
+<append xpath="/buffs">
 
-			<triggered_effect trigger="onSelfSecondaryActionStart" action="LogMessage" message=" SECONDARY attack, looking at BLOCK">
-				<requirement name="IsLookingAtBlock"/>
-			</triggered_effect>
-		</effect_group>
-		-->
 
-		<effect_group name="Power Attack Grunt">
-			<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" sound="player#powerattack">
-				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="0"/>
-				<requirement name="!HoldingItemBroken"/>
-				<requirement name="HoldingItemHasTags" tags="grunting"/>
-				<requirement name="!HoldingItemHasTags" tags="thrownWeapon"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="80"/>
-			</triggered_effect>
 
-			<triggered_effect trigger="onSelfSecondaryActionEnd" action="PlaySound" sound="player#powerattack">
-				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="0"/>
-				<requirement name="!HoldingItemBroken"/>
-				<requirement name="HoldingItemHasTags" tags="grunting"/>
-				<requirement name="HoldingItemHasTags" tags="thrownWeapon"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="80"/>
-			</triggered_effect>
-		</effect_group>
 
-		<effect_group name="Pain Sound">
-			<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" sound="player#painlg">
-				<requirement name="StatComparePercCurrentToMax" operation="LTE" value="0.5"/>
-			</triggered_effect>
-			<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" sound="player#painsm">
-				<requirement name="StatComparePercCurrentToMax" operation="GT" value="0.5"/>
-			</triggered_effect>
-		</effect_group>
-	</buff>
-
- 
- 	<buff name="buffNearDeathTraumaTrigger" hidden="true">
-		<stack_type value="replace"/>
-		<duration value=".1"/>
-		<!-- Intended death rules:
-				Death incurs XP debt.
-				All negative buffs are cleared on death.
-				Player respawns / regens to 90% health/food/water -->
-
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffNearDeathTrauma">
-				<requirement name="PlayerLevel" operation="LTE" value="300"/>
-			</triggered_effect>
-			<!--<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffNearDeathRegen"/>-->
-
-			<!--
-			<requirement name="PlayerLevel" operation="GT" value="5"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaCounter" operation="set" value="1800">
-				<requirement name="NotHasBuff" buff="buffNearDeathTrauma"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaCounter" operation="add" value="1800"/>
-			-->
-			<!--
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaCounter" operation="set" value="3600"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaReduction" operation="set" value="@$NearDeathTraumaCounter"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaReduction" operation="divide" value="40"/>
-
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffNearDeathProtection"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffNearDeathTrauma"/>
-			-->
-		</effect_group>
-	</buff>
- 
- <buff name="triggerStressed" name_key="trigger" icon="ui_game_symbol_cardio">
+	<buff name="triggerStressed" name_key="trigger" icon="ui_game_symbol_cardio">
 		<duration value=".1"/>
 		<effect_group>
 			<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffstressedCatch,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffstressedCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
@@ -425,7 +47,7 @@
 		</effect_group>
 	</buff>
  
-<buff name="buffStressedMain" name_key="buff Stressed Main" hidden="true" icon="ui_game_symbol_cardio" remove_on_death="false">
+	<buff name="buffStressedMain" name_key="buff Stressed Main" hidden="true" icon="ui_game_symbol_cardio" remove_on_death="false">
 		<damage_type value="Infection"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
@@ -763,7 +385,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Stoned01" name_key="Stoned" description_key="The weight of the world has been lifted off of your shoulders more a moment" tooltip_key="You feel very relaxed but a bit too relaxed" icon="ui_game_symbol_drunk">
+	<buff name="Stoned01" name_key="Stoned01" description_key="Stoned01Desc" tooltip_key="Stoned01Tip" icon_color="2,230,10" icon="ui_game_symbol_drunk">
 		<stack_type value="duration"/>
 		<duration value="360"/>
 		<update_rate value="30"/>
@@ -785,24 +407,24 @@
 		</effect_group>
 	</buff>
 	
-		<buff name="zombieAlertAOE2" hidden="true"> <!--Borrowing from bdubyah zAlert mod-->
-			<duration value="0"/>
-			<update_rate value="7"/>
-			<effect_group>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="zombieAlertsmallAOEEffect"/>
-			</effect_group>
-		</buff>
-		
-		<buff name="zombieAlertsmallAOEEffect" name_key="Enemies Close" description_key="Zombies are nearby."> <!--Borrowing from bdubyah zAlert mod-->
-			<stack_type value="ignore"/>
-			<duration value="3"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="StressedCounter" operation="add" value="10">
-			</triggered_effect>
-			</effect_group>
-		</buff>
+	<buff name="zombieAlertAOE2" hidden="true"> <!--Borrowing from bdubyah zAlert mod-->
+		<duration value="0"/>
+		<update_rate value="7"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="zombieAlertsmallAOEEffect"/>
+		</effect_group>
+	</buff>
 	
-	<buff name="Stoned02" name_key="Stoned" description_key="Inspiration is flowing through you" tooltip_key="You feel a bit relaxed but very focused" icon="ui_game_symbol_drunk">
+	<buff name="zombieAlertsmallAOEEffect" name_key="Enemies Close" description_key="Zombies are nearby."> <!--Borrowing from bdubyah zAlert mod-->
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+		<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="StressedCounter" operation="add" value="10">
+		</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="Stoned02" name_key="Stoned01" description_key="Stoned02Desc" tooltip_key="Stoned02Tip" icon_color="2, 108, 230" icon="ui_game_symbol_drunk">
 		<stack_type value="duration"/>
 		<duration value="360"/>
 		<update_rate value="30"/>
@@ -823,7 +445,7 @@
 		</effect_group>
 	</buff>
 
-	<buff name="Hungover" name_key="Hungover" description_key="Your drinking binge has led to horrible consequences" tooltip_key="You are now hungover" icon="ui_game_symbol_concussion" remove_on_death="false" icon_color="255,128,0">
+	<buff name="Hungover" name_key="Hungover" description_key="HungoverDesc" tooltip_key="HungoverTip" icon="ui_game_symbol_concussion" remove_on_death="false" icon_color="255,128,0">
 		<damage_type value="Disease"/>
 		<stack_type value="replace"/>
 		<duration value="0"/>
@@ -908,7 +530,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Paranoid" name_key="Paranoid" description_key="Your seeing and hearing things that aren't really there" tooltip_key="You are now paranoid from your stress" icon="ui_game_symbol_concussion" remove_on_death="false" icon_color="255,128,0">
+	<buff name="Paranoid" name_key="Paranoid" description_key="ParanoidDesc" tooltip_key="ParanoidTip" icon="ui_game_symbol_concussion" remove_on_death="false" icon_color="255,128,0">
 		<damage_type value="Bashing"/>
 		<stack_type value="replace"/>
 		<duration value="0"/>
@@ -1013,7 +635,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="BoozeStaminaBonus" name_key="Max Stamina Boost" description_key="For a limited time you have a boost of adrenaline" icon="ui_game_symbol_agility" showonhud="true">
+	<buff name="BoozeStaminaBonus" name_key="BoozeStaminaBonus" description_key="BoozeStaminaBonusDesc" icon="ui_game_symbol_agility" showonhud="true">
 		<stack_type value="replace"/>
 		<duration value="0"/>
 		<display_value value=".buffFoodStaminaBonusDisplay"/><display_value_format value="time"/>
@@ -1047,7 +669,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Stout" name_key="Stout" description_key="You're pretty sure this stout beer just put hairs on your chest" tooltip_key="What a manly beer this is" icon="ui_game_symbol_beer">
+	<buff name="buffStout" name_key="Stout" description_key="buffStoutDesc" tooltip_key="buffStoutTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffStoutDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1056,7 +678,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffStoutDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Stout">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffStout">
 				<requirement name="CVarCompare" cvar="$buffStoutDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffStoutDisplay" operation="set" value="0"/>
@@ -1076,7 +698,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Pilsner" name_key="Pilsner" description_key="This standard pilsner beer has energized you for the moment" tooltip_key="This isn't the best beer but it isn't the worst either" icon="ui_game_symbol_beer">
+	<buff name="buffPilsner" name_key="Pilsner" description_key="buffPilsnerDesc" tooltip_key="buffPilsnerTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffPilsnerDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1085,7 +707,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffPilsnerDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Pilsner">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPilsner">
 				<requirement name="CVarCompare" cvar="$buffPilsnerDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffPilsnerDisplay" operation="set" value="0"/>
@@ -1105,7 +727,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Porter" name_key="Porter" description_key="This porter is very soothing and you feel warm" tooltip_key="Porters hit quite right in the dead of winter" icon="ui_game_symbol_beer">
+	<buff name="buffPorter" name_key="Porter" description_key="buffPorterDesc" tooltip_key="buffPorterTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffPorterDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1114,7 +736,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffPorterDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Porter">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPorter">
 				<requirement name="CVarCompare" cvar="$buffPorterDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffPorterDisplay" operation="set" value="0"/>
@@ -1135,7 +757,7 @@
 		</effect_group>
 	</buff>
 	
-		<buff name="PaleAle" name_key="Pale Ale" description_key="This pale ale gives you the strength to fight" tooltip_key="This pale ale has a nice robust flavor" icon="ui_game_symbol_beer">
+	<buff name="buffPaleAle" name_key="buffPaleAle" description_key="buffPaleAleDesc" tooltip_key="buffPaleAleTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffPaleAleDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1144,7 +766,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffPaleAleDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="PaleAle">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPaleAle">
 				<requirement name="CVarCompare" cvar="$buffPaleAleDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffPaleAleDisplay" operation="set" value="0"/>
@@ -1166,7 +788,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Lager" name_key="Lager" description_key="This charismatic drink is a household staple" tooltip_key="Your charisma shines after slamming this lager" icon="ui_game_symbol_beer">
+	<buff name="buffLager" name_key="Lager" description_key="buffLagerDesc" tooltip_key="buffLagerTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffLagerDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1175,7 +797,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffLagerDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Lager">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLager">
 				<requirement name="CVarCompare" cvar="$buffLagerDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffLagerDisplay" operation="set" value="0"/>
@@ -1196,7 +818,7 @@
 		</effect_group>
 	</buff>
 
-	<buff name="IPA" name_key="IPA" description_key="This IPA refreshes you in this heat" tooltip_key="IPAs are so refreshing on the taste buds" icon="ui_game_symbol_beer">
+	<buff name="buffIPA" name_key="IPA" description_key="buffIPADesc" tooltip_key="buffIPATip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffIPADisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1205,7 +827,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffIPADisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="IPA">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffIPA">
 				<requirement name="CVarCompare" cvar="$buffIPADuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffIPADisplay" operation="set" value="0"/>
@@ -1226,7 +848,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="PumpkinAle" name_key="Pumpkin Ale" description_key="Your immune system feels quite the boost" tooltip_key="This is one well crafted pumpkin ale" icon="ui_game_symbol_beer">
+	<buff name="buffPumpkinAle" name_key="buffPumpkinAle" description_key="buffPumpkinAleDesc" tooltip_key="buffPumpkinAleTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffPumpkinAleDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1235,7 +857,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffPumpkinAleDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="PumpkinAle">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPumpkinAle">
 				<requirement name="CVarCompare" cvar="$buffPumpkinAleDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffPumpkinAleDisplay" operation="set" value="0"/>
@@ -1256,7 +878,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="WheatAle" name_key="Wheat Ale" description_key="What a great aroma and taste of this fine beer" tooltip_key="You get the best of both worlds with this beer" icon="ui_game_symbol_beer">
+	<buff name="buffWheatAle" name_key="buffWheatAle" description_key="buffWheatAleDesc" tooltip_key="buffWheatAleTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffWheatAleDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1265,7 +887,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffWheatAleDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="WheatAle">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffWheatAle">
 				<requirement name="CVarCompare" cvar="$buffWheatAleDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffWheatAleDisplay" operation="set" value="0"/>
@@ -1287,7 +909,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Whiskey" name_key="Whiskey" description_key="Relieved but at what cost" tooltip_key="I hope this was worth it" icon="ui_game_symbol_beer">
+	<buff name="buffWhiskey" name_key="Whiskey" description_key="buffWhiskeyDesc" tooltip_key="buffWhiskeyTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffWhiskeyDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1296,7 +918,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffWhiskeyDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Whiskey">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffWhiskey">
 				<requirement name="CVarCompare" cvar="$buffWhiskeyDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffWhiskeyDisplay" operation="set" value="0"/>
@@ -1319,7 +941,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Vodka" name_key="Vodka" description_key="Relieved but at what cost" tooltip_key="I hope this was worth it" icon="ui_game_symbol_beer">
+	<buff name="buffVodka" name_key="Vodka" description_key="buffVodkaDesc" tooltip_key="buffVodkaTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffVodkaDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1328,7 +950,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffVodkaDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Vodka">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffVodka">
 				<requirement name="CVarCompare" cvar="$buffVodkaDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffVodkaDisplay" operation="set" value="0"/>
@@ -1351,7 +973,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Rum" name_key="Rum" description_key="Relieved but at what cost" tooltip_key="I hope this was worth it" icon="ui_game_symbol_beer">
+	<buff name="buffRum" name_key="Rum" description_key="buffRumDesc" tooltip_key="buffRumTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffRumDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1360,7 +982,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffRumDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Rum">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRum">
 				<requirement name="CVarCompare" cvar="$buffRumDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffRumDisplay" operation="set" value="0"/>
@@ -1383,7 +1005,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Tequila" name_key="Tequila" description_key="Relieved but at what cost" tooltip_key="I hope this was worth it" icon="ui_game_symbol_beer">
+	<buff name="buffTequila" name_key="Tequila" description_key="buffTequilaDesc" tooltip_key="buffTequilaTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffTequilaDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1392,7 +1014,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffTequilaDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Tequila">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffTequila">
 				<requirement name="CVarCompare" cvar="$buffTequilaDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffTequilaDisplay" operation="set" value="0"/>
@@ -1415,7 +1037,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Gin" name_key="Gin" description_key="Relieved but at what cost" tooltip_key="I hope this was worth it" icon="ui_game_symbol_beer">
+	<buff name="buffGin" name_key="Gin" description_key="buffGinDesc" tooltip_key="buffGinTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffGinDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1424,7 +1046,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffGinDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Gin">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffGin">
 				<requirement name="CVarCompare" cvar="$buffGinDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffGinDisplay" operation="set" value="0"/>
@@ -1447,7 +1069,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Sake" name_key="Sake" description_key="Relieved but at what cost" tooltip_key="I hope this was worth it" icon="ui_game_symbol_beer">
+	<buff name="buffSake" name_key="Sake" description_key="buffSakeDesc" tooltip_key="buffSakeTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffSakeDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1456,7 +1078,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffSakeDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Sake">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffSake">
 				<requirement name="CVarCompare" cvar="$buffSakeDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffSakeDisplay" operation="set" value="0"/>
@@ -1477,7 +1099,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Brandy" name_key="Brandy" description_key="Relieved but at what cost" tooltip_key="I hope this was worth it" icon="ui_game_symbol_beer">
+	<buff name="buffBrandy" name_key="Brandy" description_key="buffBrandyDesc" tooltip_key="buffBrandyTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffBrandyDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1486,7 +1108,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffBrandyDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Brandy">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBrandy">
 				<requirement name="CVarCompare" cvar="$buffBrandyDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffBrandyDisplay" operation="set" value="0"/>
@@ -1506,7 +1128,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="GoldRush" name_key="Gold Rush" description_key="Nothing eases stress like a delicious cocktail" tooltip_key="You drink a well crafted cocktail" icon="ui_game_symbol_beer">
+	<buff name="buffGoldRush" name_key="buffGoldRush" description_key="buffCocktailDesc" tooltip_key="buffCocktailTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffGoldRushDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1515,7 +1137,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffGoldRushDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="GoldRush">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffGoldRush">
 				<requirement name="CVarCompare" cvar="$buffGoldRushDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffGoldRushDisplay" operation="set" value="0"/>
@@ -1534,7 +1156,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="IrishCoffee" name_key="Irish Coffee" description_key="Nothing eases stress like a delicious cocktail" tooltip_key="You drink a well crafted cocktail" icon="ui_game_symbol_beer">
+	<buff name="buffIrishCoffee" name_key="buffIrishCoffee" description_key="buffCocktailDesc" tooltip_key="buffCocktailTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffIrishCoffeeDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1543,7 +1165,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffIrishCoffeeDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="IrishCoffee">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffIrishCoffee">
 				<requirement name="CVarCompare" cvar="$buffIrishCoffeeDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffIrishCoffeeDisplay" operation="set" value="0"/>
@@ -1567,7 +1189,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="BlackJack" name_key="BlackJack" description_key="Nothing eases stress like a delicious cocktail" tooltip_key="You drink a well crafted cocktail" icon="ui_game_symbol_beer">
+	<buff name="buffBlackJack" name_key="buffBlackJack" description_key="buffCocktailDesc" tooltip_key="buffCocktailTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffBlackJackDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1576,7 +1198,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffBlackJackDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="BlackJack">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBlackJack">
 				<requirement name="CVarCompare" cvar="$buffBlackJackDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffBlackJackDisplay" operation="set" value="0"/>
@@ -1596,7 +1218,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="GinJuice" name_key="Gin and Juice" description_key="Nothing eases stress like a delicious cocktail" tooltip_key="You drink a well crafted cocktail" icon="ui_game_symbol_beer">
+	<buff name="buffGinJuice" name_key="buffGinJuice" description_key="buffCocktailDesc" tooltip_key="buffCocktailTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffGinJuiceDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1605,13 +1227,12 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffGinJuiceDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="GinJuice">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffGinJuice">
 				<requirement name="CVarCompare" cvar="$buffGinJuiceDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffGinJuiceDisplay" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffGinJuiceDuration" operation="set" value="0"/>
 		</effect_group>
-
 		<effect_group>
 			<passive_effect name="TreasureBlocksPerReduction" operation="base_add" value="-6"/><!-- base value in quests is 10 -->
 			<passive_effect name="LootQuantity" operation="perc_add" value=".3" tags="buriedTreasure"/>
@@ -1626,7 +1247,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="NewVegas" name_key="New Vegas Bomb" description_key="Nothing eases stress like a delicious cocktail" tooltip_key="You drink a well crafted cocktail" icon="ui_game_symbol_beer">
+	<buff name="buffNewVegas" name_key="buffNewVegas" description_key="buffCocktailDesc" tooltip_key="buffCocktailTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffNewVegasDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1635,7 +1256,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffNewVegasDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="NewVegas">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffNewVegas">
 				<requirement name="CVarCompare" cvar="$buffNewVegasDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffNewVegasDisplay" operation="set" value="0"/>
@@ -1656,7 +1277,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="DayWalker" name_key="Day Walker" description_key="Nothing eases stress like a delicious cocktail" tooltip_key="You drink a well crafted cocktail" icon="ui_game_symbol_beer">
+	<buff name="buffDayWalker" name_key="buffDayWalker" description_key="buffCocktailDesc" tooltip_key="buffCocktailTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffDayWalkerDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1665,7 +1286,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDayWalkerDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="DayWalker">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDayWalker">
 				<requirement name="CVarCompare" cvar="$buffDayWalkerDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDayWalkerDisplay" operation="set" value="0"/>
@@ -1689,7 +1310,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="Zombie" name_key="Zombie" description_key="Nothing eases stress like a delicious cocktail" tooltip_key="You drink a well crafted cocktail" icon="ui_game_symbol_beer">
+	<buff name="buffZombie" name_key="buffZombie" description_key="buffCocktailDesc" tooltip_key="buffCocktailTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffZombieDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1698,7 +1319,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffZombieDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="Zombie">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffZombie">
 				<requirement name="CVarCompare" cvar="$buffZombieDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffZombieDisplay" operation="set" value="0"/>
@@ -1722,7 +1343,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="DoubleTap" name_key="Double Tap" description_key="Nothing eases stress like a delicious cocktail" tooltip_key="You drink a well crafted cocktail" icon="ui_game_symbol_beer">
+	<buff name="buffDoubleTap" name_key="buffDoubleTap" description_key="buffCocktailDesc" tooltip_key="buffCocktailTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffDoubleTapDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1731,7 +1352,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDoubleTapDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="DoubleTap">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDoubleTap">
 				<requirement name="CVarCompare" cvar="$buffDoubleTapDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDoubleTapDisplay" operation="set" value="0"/>
@@ -1751,7 +1372,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="LongIsland" name_key="Long Island" description_key="Nothing eases stress like a delicious cocktail" tooltip_key="You drink a well crafted cocktail" icon="ui_game_symbol_beer">
+	<buff name="buffLongIsland" name_key="buffLongIsland" description_key="buffCocktailDesc" tooltip_key="buffCocktailTip" icon="ui_game_symbol_beer">
 		<stack_type value="replace"/><duration value="0"/>
 		<display_value value=".buffLongIslandDisplay"/><display_value_format value="time"/>
 		<effect_group>
@@ -1760,7 +1381,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffLongIslandDisplay" operation="divide" value="@$MetabolismDuration"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="LongIsland">
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLongIsland">
 				<requirement name="CVarCompare" cvar="$buffLongIslandDuration" operation="LTE" value="0"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffLongIslandDisplay" operation="set" value="0"/>
