@@ -1,5 +1,5 @@
-# Stressed Out Mod - By irishmanjmo
-magejosh updated to v1 with permission from irishmanjmo
+# Stressed Out Mod - By IrishManJMo
+magejosh updated to v1 with permission from [IrishManJMo](https://github.com/IrishManJMo)
 Made best efforts to maintain the intent of the mod while doing the updates. Though some changes were necessary due to vanilla changes. 
 
 ## Requirements
@@ -22,7 +22,7 @@ Should be server-side safe and require only the host to install it, whether that
 
 
 ## Roadmap
-magejosh: irishmanjmo mentioned wanting to make a version with adjustable settings to disable the visual effects from some of the buffs for players with visual issues. I have a method to do so with xml only, and will make that next. But I'd also like to make a version that uses gears for an ingame menu option to disable them. Working on learning the way to use it best and will share that when I get it working.
+magejosh: IrishManJMo mentioned wanting to make a version with adjustable settings to disable the visual effects from some of the buffs for players with visual issues. I have a method to do so with xml only, and will make that next. But I'd also like to make a version that uses gears for an ingame menu option to disable them. Working on learning the way to use it best and will share that when I get it working.
 I'd also like to add new icons and models as an addon mod that loads after this one and makes all the new things prettier. That will come sometime soon, but might be a month or two.
 Other things on my wishlist of additions:
 - Hangover cure, and make painkillers speedup recovery time from a hangover.
