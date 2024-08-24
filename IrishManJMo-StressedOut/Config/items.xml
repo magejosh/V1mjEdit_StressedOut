@@ -87,7 +87,7 @@
 	
 	<item name="foodCropBarley">
 		<property name="Tags" value="food,foodSkill,fitness"/>
-		<property name="CustomIcon" value="resourceCropHopsFlower"/>
+		<property name="CustomIcon" value="plantedHop3Harvest"/>
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -161,7 +161,7 @@
 		<property name="HoldType" value="12"/>
 		<property name="Meshfile" value="@:Other/Items/Crafting/plant_fibers.fbx"/>
 		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-		<property name="CustomIcon" value="apparelCigar"/>
+		<property name="CustomIcon" value="shapePipeThin"/>
 		<property name="Material" value="Morganic"/>
 		<property name="EconomicValue" value="100"/>
 		<property name="Stacknumber" value="10"/> <!-- STK loot -->
@@ -764,6 +764,7 @@
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="CustomIcon" value="drinkJarGrandpasAwesomeSauce"/>
+	<property name="CustomIconTint" value="FFC500"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Weight" value="10"/>
 	<property name="Stacknumber" value="10"/> <!-- STK resource -->
@@ -817,6 +818,7 @@
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="CustomIcon" value="drinkJarGrandpasMoonshine"/>
+	<property name="CustomIconTint" value="FFC500"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Weight" value="10"/>
 	<property name="Stacknumber" value="10"/> <!-- STK resource -->
@@ -870,6 +872,7 @@
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="CustomIcon" value="drinkJarGrandpasMoonshine"/>
+	<property name="CustomIconTint" value="FFFB14"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Weight" value="10"/>
 	<property name="Stacknumber" value="10"/> <!-- STK resource -->
@@ -923,6 +926,7 @@
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="CustomIcon" value="drinkJarGrandpasAwesomeSauce"/>
+	<property name="CustomIconTint" value="BAFF4F"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Weight" value="10"/>
 	<property name="Stacknumber" value="10"/> <!-- STK resource -->
@@ -976,6 +980,7 @@
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="CustomIcon" value="drinkJarGrandpasMoonshine"/>
+	<property name="CustomIconTint" value="FFC500"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Weight" value="10"/>
 	<property name="Stacknumber" value="10"/> <!-- STK resource -->
@@ -1029,6 +1034,7 @@
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="CustomIcon" value="drinkJarGrandpasMoonshine"/>
+	<property name="CustomIconTint" value="8C00FF"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Weight" value="10"/>
 	<property name="Stacknumber" value="10"/> <!-- STK resource -->
@@ -1083,6 +1089,7 @@
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="CustomIcon" value="drinkJarGrandpasAwesomeSauce"/>
+	<property name="CustomIconTint" value="990000"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Weight" value="10"/>
 	<property name="Stacknumber" value="10"/> <!-- STK resource -->
@@ -1234,7 +1241,8 @@
 	<property name="DisplayType" value="IrishCoffee"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
+	<property name="CustomIcon" value="drinkJarCoffee"/>
+	<property name="CustomIconTint" value="FFFB14"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->
 	<property name="Weight" value="10"/>	
@@ -1289,7 +1297,7 @@
 	<property name="DisplayType" value="BlackJack"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
+	<property name="CustomIcon" value="drinkJarBlackStrapCoffee"/>
 	<property name="CustomIconTint" value="552C00"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->
@@ -1564,7 +1572,7 @@
 	<property name="DisplayType" value="DoubleTap"/>
 	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-	<property name="CustomIcon" value="drinkJarYuccaJuice"/>
+	<property name="CustomIcon" value="drinkJarYuccaJuiceSmoothie"/>
 	<property name="CustomIconTint" value="BAFF4F"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="10"/> <!-- STK drink -->

@@ -22,7 +22,7 @@
 
 	<block name="plantedTobaccoGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Dev"/>
 		<property name="CustomIcon" value="plantedPotato3Harvest"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
@@ -34,7 +34,7 @@
 	
 	<block name="plantedTobacco3Harvest">
 		<property name="Extends" value="cropsHarvestableMaster"/>
-		<property name="CreativeMode" value="Dev"/>
+		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="plantedPotato3Harvest"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
@@ -76,7 +76,7 @@
 
 	<block name="plantedSativaGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Dev"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/blueberry_plant_growthPrefab"/>
@@ -88,7 +88,7 @@
 	
 	<block name="plantedSativa3Harvest">
 		<property name="Extends" value="cropsHarvestableMaster"/>
-		<property name="CreativeMode" value="Dev"/>
+		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/blueberry_plant_harvestPrefab"/>
@@ -130,7 +130,7 @@
 
 	<block name="plantedIndicaGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Dev"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/blueberry_plant_growthPrefab"/>
@@ -142,7 +142,7 @@
 	
 	<block name="plantedIndica3Harvest">
 		<property name="Extends" value="cropsHarvestableMaster"/>
-		<property name="CreativeMode" value="Dev"/>
+		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="plantedHop1"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/blueberry_plant_harvestPrefab"/>
@@ -183,7 +183,7 @@
 
 	<block name="plantedSugarCaneGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Dev"/>
 		<property name="CustomIcon" value="plantedCornDeadSmall"/>
 		<property name="Texture" value="392"/>
 		<property name="PlantGrowing.Next" value="plantedSugarCanePlant"/>
@@ -194,7 +194,7 @@
 
 	<block name="plantedSugarCane3Harvest">
 		<property name="Extends" value="cropsHarvestableMaster"/>
-		<property name="CreativeMode" value="Dev"/>
+		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="plantedCornDeadMedium"/>
 		<property name="Texture" value="351"/>
 		<property name="SortOrder1" value="B969"/>
@@ -234,7 +234,7 @@
 
 	<block name="plantedAgaveGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Dev"/>
 		<property name="CustomIcon" value="plantedYucca3Harvest"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/plant_aloe2_Prefab"/>
@@ -246,7 +246,7 @@
 	
 	<block name="plantedAgave3Harvest">
 		<property name="Extends" value="cropsHarvestableMaster"/>
-		<property name="CreativeMode" value="Dev"/>
+		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="plantedYucca3Harvest"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
@@ -288,7 +288,7 @@
 
 	<block name="plantedCocoaGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Dev"/>
 		<property name="CustomIcon" value="cropsHarvestableMaster"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/plant_yucca_growthPrefab"/>
@@ -300,7 +300,7 @@
 	
 	<block name="plantedCocoa3Harvest">
 		<property name="Extends" value="cropsHarvestableMaster"/>
-		<property name="CreativeMode" value="Dev"/>
+		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="cropsHarvestableMaster"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/plant_yucca_harvestPrefab"/>
@@ -343,7 +343,7 @@
 
 	<block name="plantedBarleyGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Dev"/>
 		<property name="CustomIcon" value="treeForestGrassDiagonal"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkGreenMediumPrefab"/>
@@ -356,7 +356,7 @@
 	
 	<block name="plantedBarley3Harvest">
 		<property name="Extends" value="cropsHarvestableMaster"/>
-		<property name="CreativeMode" value="Dev"/>
+		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="treeForestGrassDiagonal"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkBrownPrefab"/>
@@ -403,7 +403,7 @@
 
 	<block name="plantedWheatGrowing">
 		<property name="Extends" value="cropsGrowingMaster"/>
-		<property name="CreativeMode" value="None"/>
+		<property name="CreativeMode" value="Dev"/>
 		<property name="CustomIcon" value="treeGreenBrownGrassDiagonal"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkGreenMediumPrefab"/>
@@ -416,7 +416,7 @@
 	
 	<block name="plantedWheat3Harvest">
 		<property name="Extends" value="cropsHarvestableMaster"/>
-		<property name="CreativeMode" value="Dev"/>
+		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="treeGreenBrownGrassDiagonal"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/OutdoorDecor/cornStalkBrownPrefab"/>

@@ -156,7 +156,7 @@ plantedTobaccoSprout,Tobacco Sprout
 plantedTobaccoSproutDesc,"A delicate tobacco sprout, beginning its life cycle."
 plantedTobaccoGrowing,Tobacco Growing
 plantedTobaccoPlant,Tobacco Plant
-drugCigarette,drugCigarette
+drugCigarette,Cigarette
 drugCigaretteDesc,"A rolled stick of tobacco, providing a quick but temporary stress relief."
 drugCigar,Cigar
 drugCigarDesc,"A thick, hand-rolled tobacco product, offering a more substantial and flavorful experience."
