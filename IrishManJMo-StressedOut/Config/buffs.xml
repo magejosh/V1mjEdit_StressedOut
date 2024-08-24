@@ -389,8 +389,7 @@
 		<stack_type value="duration"/>
 		<duration value="360"/>
 		<update_rate value="30"/>
-		<effect_group>
-	
+		<effect_group>	
 			<passive_effect name="WaterChangeOT" operation="base_subtract" value="0.05"/>
 			<passive_effect name="FoodChangeOT" operation="base_subtract" value="0.05"/>
 			

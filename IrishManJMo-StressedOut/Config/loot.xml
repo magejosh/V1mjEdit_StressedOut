@@ -188,6 +188,10 @@
 			<item group="foodCropSprouts"/>
 		</append>
 		
+		<append xpath="/lootcontainers/lootgroup[@name='seedsNoFlowers']">
+			<item group="foodCropSprouts"/>
+		</append>
+		
 		<append xpath="/lootcontainers/lootgroup[@name='perkBooks']">
 			<item name="bookANiceRelaxingBook"/>
 		</append>
